@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import HeroCarousel from "@/components/HeroCarousel";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import StudiasagaDisplay from "@/components/StudiasagaDisplay";
 
 const Index = () => {
   return (
@@ -86,7 +87,7 @@ const Index = () => {
           </div>
         </section>
       </main>
-
+    <StudiasagaDisplay/>
       <Footer />
     </div>
   );
