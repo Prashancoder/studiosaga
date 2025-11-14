@@ -34,41 +34,46 @@ const Header = () => {
   }
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled ? "bg-background/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
-      }`}
-    >
+<header
+  className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b border-white/30 ${
+    isScrolled ? "bg-background/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
+  }`}
+>
+
       <div className="container mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
-          <Link to="/" className="text-2xl font-extralight tracking-wider text-foreground">
-            StudiaSaga
-          </Link>
+<Link to="/" className="text-2xl font-extralight tracking-wider text-white">
+  StudiaSaga
+</Link>
+
 
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList className="gap-8">
               <NavigationMenuItem>
-                <Link
-                  to="/"
-                  className="text-sm font-light tracking-wide text-foreground hover:text-luxury-brown transition-colors"
-                >
-                  Home
-                </Link>
+<Link
+  to="/"
+  className="text-sm font-light tracking-wide text-white hover:text-luxury-brown transition-colors"
+>
+  Home
+</Link>
+
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <Link
-                  to="/our-saga"
-                  className="text-sm font-light tracking-wide text-foreground hover:text-luxury-brown transition-colors"
-                >
-                  Our Saga
-                </Link>
+<Link
+  to="/our-saga"
+  className="text-sm font-light tracking-wide text-white hover:text-luxury-brown transition-colors"
+>
+  Our Saga
+</Link>
+
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-sm font-light tracking-wide bg-transparent hover:bg-transparent data-[state=open]:bg-transparent">
-                  Style Palette
-                </NavigationMenuTrigger>
+<NavigationMenuTrigger className="text-sm font-light tracking-wide text-white bg-transparent hover:bg-transparent">
+  Style Palette
+</NavigationMenuTrigger>
+
                 <NavigationMenuContent>
                   <ul className="grid w-[200px] gap-3 p-4 bg-background">
                     <li>
@@ -92,9 +97,10 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-sm font-light tracking-wide bg-transparent hover:bg-transparent data-[state=open]:bg-transparent">
-                  Interior Kit
-                </NavigationMenuTrigger>
+<NavigationMenuTrigger className="text-sm font-light tracking-wide text-white bg-transparent hover:bg-transparent">
+  Interior Kit
+</NavigationMenuTrigger>
+
                 <NavigationMenuContent>
                   <ul className="grid w-[300px] gap-3 p-4 bg-background">
                     <li className="font-light text-xs uppercase tracking-wider text-muted-foreground mb-2">

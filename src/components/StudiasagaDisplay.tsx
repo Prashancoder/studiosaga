@@ -40,7 +40,7 @@ const StudiasagaDisplay: FC = () => {
     // Note: I've removed min-h-screen here so it doesn't force full height when used as a sub-component.
     // If you need it to be full height, you can add it back, but usually homepage components are contained.
     <div 
-      className="flex flex-col p-4 md:p-8 relative w-full h-[60vh] md:h-[80vh]"
+      className="flex flex-col p-4 md:p-8 relative w-full h-[40vh] md:h-[60vh]"
       style={{ backgroundColor: customStyle['--bg-color'] }}
     >
       {/* The main content area is flex-grow to push the social icons 
