@@ -109,7 +109,7 @@ const ContentCard: React.FC<ContentCardProps> = ({
       />
 
       {/* OVERLAY TEXT */}
-      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center transition duration-300 group-hover:bg-black/50 z-20">
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] flex items-center justify-center transition duration-300 group-hover:bg-black/50 z-20">
         <p className="text-white text-3xl md:text-5xl font-serif font-light text-center px-4 tracking-widest uppercase opacity-90 leading-none">
           {logoText}
         </p>
@@ -119,9 +119,15 @@ const ContentCard: React.FC<ContentCardProps> = ({
     <p className="text-sm uppercase text-gray-500 mb-1 tracking-wider">
       {category}
     </p>
-    <h3 className="text-lg font-semibold leading-tight text-gray-800 group-hover:text-gray-900 transition">
-      {title}
-    </h3>
+<h3 className="text-sm font-normal text-gray-900 group-hover:text-gray-700 tracking-wide leading-relaxed transition-all">
+  {title}
+</h3>
+
+
+
+
+
+
   </a>
 );
 
