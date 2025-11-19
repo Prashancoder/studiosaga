@@ -1,11 +1,14 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import HeroCarousel from "@/components/HeroCarousel";      
 
 const StylePaletteMinimalist = () => {
   return (
     <div className="min-h-screen">
       <Header />
+        <HeroCarousel />
+      
       
       <main className="pt-32 pb-24">
         <div className="container mx-auto px-6">

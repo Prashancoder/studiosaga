@@ -1,6 +1,7 @@
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu } from "lucide-react";
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -8,12 +9,15 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+
 import { Button } from "@/components/ui/button";
+
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
+
 import {
   Collapsible,
   CollapsibleContent,
@@ -26,215 +30,159 @@ const Header = () => {
   const [stylePaletteOpen, setStylePaletteOpen] = useState(false);
   const [interiorKitOpen, setInteriorKitOpen] = useState(false);
 
-  // Handle scroll for header background
-  if (typeof window !== "undefined") {
-    window.addEventListener("scroll", () => {
+  useEffect(() => {
+    const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-    });
-  }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const textColor = isScrolled ? "text-foreground" : "text-white";
+
+  const buttonClasses = isScrolled
+    ? "border-foreground text-foreground hover:bg-foreground hover:text-background"
+    : "border-white text-white hover:bg-white hover:text-background";
+
+  const navTriggerClass = `text-sm font-light tracking-wide bg-transparent hover:bg-transparent ${textColor} hover:text-luxury-brown`;
 
   return (
-<header
-  className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 border-b border-white/30 ${
-    isScrolled ? "bg-background/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
-  }`}
->
-
-      <div className="container mx-auto px-6 py-6">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        isScrolled
+          ? "bg-background/95 backdrop-blur-sm shadow-sm border-b border-border"
+          : "bg-transparent"
+      }`}
+    >
+      <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-<Link to="/" className="text-2xl font-extralight tracking-wider text-white">
-  StudiaSaga
-</Link>
 
+          {/* Logo */}
+          <Link
+            to="/"
+            className={`text-2xl font-extralight tracking-wider ${textColor}`}
+          >
+            StudiaSaga
+          </Link>
 
+          {/* Desktop Navigation */}
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList className="gap-8">
-              <NavigationMenuItem>
-<Link
-  to="/"
-  className="text-sm font-light tracking-wide text-white hover:text-luxury-brown transition-colors"
->
-  Home
-</Link>
 
+              <NavigationMenuItem>
+                <Link
+                  to="/"
+                  className={`text-sm font-light tracking-wide hover:text-luxury-brown transition-colors ${textColor}`}
+                >
+                  Home
+                </Link>
               </NavigationMenuItem>
 
               <NavigationMenuItem>
-<Link
-  to="/our-saga"
-  className="text-sm font-light tracking-wide text-white hover:text-luxury-brown transition-colors"
->
-  Our Saga
-</Link>
-
+                <Link
+                  to="/our-saga"
+                  className={`text-sm font-light tracking-wide hover:text-luxury-brown transition-colors ${textColor}`}
+                >
+                  Our Saga
+                </Link>
               </NavigationMenuItem>
 
+              {/* Style Palette */}
               <NavigationMenuItem>
-<NavigationMenuTrigger className="text-sm font-light tracking-wide text-white bg-transparent hover:bg-transparent">
-  Style Palette
-</NavigationMenuTrigger>
-
-
-
-
-
+                <NavigationMenuTrigger className={navTriggerClass}>
+                  Style Palette
+                </NavigationMenuTrigger>
 
                 <NavigationMenuContent>
-                  <ul className="grid w-[200px] gap-3 p-4 bg-background">
+                  <ul className="grid w-[200px] gap-1 p-2 bg-background shadow-lg rounded-md border">
                     <li>
                       <Link
                         to="/style-palette/minimalist"
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        className="block rounded-md p-3 text-sm font-light hover:bg-accent hover:text-accent-foreground"
                       >
-                        <div className="text-sm font-light">Minimalist</div>
+                        Minimalist
                       </Link>
                     </li>
                     <li>
                       <Link
                         to="/style-palette/industrial"
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
+                        className="block rounded-md p-3 text-sm font-light hover:bg-accent hover:text-accent-foreground"
                       >
-                        <div className="text-sm font-light">Industrial</div>
+                        Industrial
                       </Link>
                     </li>
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
 
+              {/* Interior Kit */}
               <NavigationMenuItem>
-
-
-
-
-
-
-
-
-
-
-
-                
-<NavigationMenuTrigger className="text-sm font-light tracking-wide text-white bg-transparent hover:bg-transparent">
-  Interior Kit
-</NavigationMenuTrigger>
+                <NavigationMenuTrigger className={navTriggerClass}>
+                  Interior Kit
+                </NavigationMenuTrigger>
 
                 <NavigationMenuContent>
-                  <ul className="grid w-[300px] gap-3 p-4 bg-background">
-                    <li className="font-light text-xs uppercase tracking-wider text-muted-foreground mb-2">
-                      Base Tier
-                    </li>
-                    <li>
-                      <Link
-                        to="/interior-kit/base/1bhk"
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        <div className="text-sm font-light">1BHK</div>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/interior-kit/base/2bhk"
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        <div className="text-sm font-light">2BHK</div>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/interior-kit/base/3bhk"
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        <div className="text-sm font-light">3BHK</div>
-                      </Link>
-                    </li>
+                  <div className="grid grid-cols-3 w-[550px] gap-6 p-6 bg-background shadow-xl rounded-lg border">
 
-                    <li className="font-light text-xs uppercase tracking-wider text-muted-foreground mb-2 mt-4">
-                      Standard
-                    </li>
-                    <li>
-                      <Link
-                        to="/interior-kit/standard/1bhk"
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        <div className="text-sm font-light">1BHK</div>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/interior-kit/standard/2bhk"
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        <div className="text-sm font-light">2BHK</div>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/interior-kit/standard/3bhk"
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        <div className="text-sm font-light">3BHK</div>
-                      </Link>
-                    </li>
+                    {[
+                      ["Base Tier", "base"],
+                      ["Standard", "standard"],
+                      ["Premium", "premium"]
+                    ].map(([title, segment]) => (
+                      <div key={segment}>
+                        <h4 className="font-semibold text-sm uppercase tracking-wider text-muted-foreground mb-3">
+                          {title}
+                        </h4>
+                        <div className="flex flex-col space-y-1">
+                          {["1BHK", "2BHK", "3BHK"].map((size) => (
+                            <Link
+                              key={`${segment}-${size}`}
+                              to={`/interior-kit/${segment}/${size.toLowerCase()}`}
+                              className="text-sm font-light p-2 rounded-md hover:bg-accent hover:text-accent-foreground"
+                            >
+                              {size}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
 
-                    <li className="font-light text-xs uppercase tracking-wider text-muted-foreground mb-2 mt-4">
-                      Premium
-                    </li>
-                    <li>
-                      <Link
-                        to="/interior-kit/premium/1bhk"
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        <div className="text-sm font-light">1BHK</div>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/interior-kit/premium/2bhk"
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        <div className="text-sm font-light">2BHK</div>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/interior-kit/premium/3bhk"
-                        className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      >
-                        <div className="text-sm font-light">3BHK</div>
-                      </Link>
-                    </li>
-                  </ul>
+                  </div>
                 </NavigationMenuContent>
               </NavigationMenuItem>
+
             </NavigationMenuList>
           </NavigationMenu>
 
+          {/* Button + Mobile Toggle */}
           <div className="flex items-center gap-4">
             <Button
               variant="outline"
-              className="hidden md:inline-flex border-foreground text-foreground hover:bg-foreground hover:text-background font-light tracking-wide"
+              className={`hidden md:inline-flex font-light tracking-wide ${buttonClasses}`}
             >
               Get In Touch
             </Button>
 
-            {/* Mobile Menu Toggle */}
+            {/* Mobile Menu */}
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
               <SheetTrigger asChild>
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="md:hidden text-foreground"
-                  aria-label="Open menu"
+                  className={`md:hidden ${textColor}`}
                 >
                   <Menu className="h-6 w-6" />
                 </Button>
               </SheetTrigger>
+
               <SheetContent side="left" className="w-[280px] p-0">
+
                 <div className="flex flex-col h-full">
-                  <div className="p-6 border-b border-border">
+                  <div className="p-6 border-b">
                     <Link
                       to="/"
-                      className="text-2xl font-extralight tracking-wider text-foreground"
+                      className="text-2xl font-extralight text-foreground"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       StudiaSaga
@@ -243,9 +191,10 @@ const Header = () => {
 
                   <nav className="flex-1 overflow-y-auto p-6">
                     <div className="flex flex-col gap-6">
+
                       <Link
                         to="/"
-                        className="text-base font-light tracking-wide text-foreground hover:text-luxury-brown transition-colors"
+                        className="text-base font-light text-foreground"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         Home
@@ -253,15 +202,18 @@ const Header = () => {
 
                       <Link
                         to="/our-saga"
-                        className="text-base font-light tracking-wide text-foreground hover:text-luxury-brown transition-colors"
+                        className="text-base font-light text-foreground"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         Our Saga
                       </Link>
 
-                      {/* Style Palette Collapsible */}
-                      <Collapsible open={stylePaletteOpen} onOpenChange={setStylePaletteOpen}>
-                        <CollapsibleTrigger className="flex items-center justify-between w-full text-base font-light tracking-wide text-foreground hover:text-luxury-brown transition-colors">
+                      {/* Style Palette Mobile */}
+                      <Collapsible
+                        open={stylePaletteOpen}
+                        onOpenChange={setStylePaletteOpen}
+                      >
+                        <CollapsibleTrigger className="flex items-center justify-between text-base font-light">
                           Style Palette
                           <ChevronDown
                             className={`h-4 w-4 transition-transform ${
@@ -269,27 +221,19 @@ const Header = () => {
                             }`}
                           />
                         </CollapsibleTrigger>
+
                         <CollapsibleContent className="mt-3 ml-4 flex flex-col gap-3">
-                          <Link
-                            to="/style-palette/minimalist"
-                            className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors"
-                            onClick={() => setMobileMenuOpen(false)}
-                          >
-                            Minimalist
-                          </Link>
-                          <Link
-                            to="/style-palette/industrial"
-                            className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors"
-                            onClick={() => setMobileMenuOpen(false)}
-                          >
-                            Industrial
-                          </Link>
+                          <Link to="/style-palette/minimalist">Minimalist</Link>
+                          <Link to="/style-palette/industrial">Industrial</Link>
                         </CollapsibleContent>
                       </Collapsible>
 
-                      {/* Interior Kit Collapsible */}
-                      <Collapsible open={interiorKitOpen} onOpenChange={setInteriorKitOpen}>
-                        <CollapsibleTrigger className="flex items-center justify-between w-full text-base font-light tracking-wide text-foreground hover:text-luxury-brown transition-colors">
+                      {/* Interior Kit Mobile */}
+                      <Collapsible
+                        open={interiorKitOpen}
+                        onOpenChange={setInteriorKitOpen}
+                      >
+                        <CollapsibleTrigger className="flex items-center justify-between text-base font-light">
                           Interior Kit
                           <ChevronDown
                             className={`h-4 w-4 transition-transform ${
@@ -297,111 +241,46 @@ const Header = () => {
                             }`}
                           />
                         </CollapsibleTrigger>
+
                         <CollapsibleContent className="mt-3 ml-4 flex flex-col gap-4">
-                          <div>
-                            <div className="text-xs uppercase tracking-wider text-muted-foreground mb-2">
-                              Base Tier
-                            </div>
-                            <div className="flex flex-col gap-2 ml-2">
-                              <Link
-                                to="/interior-kit/base/1bhk"
-                                className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors"
-                                onClick={() => setMobileMenuOpen(false)}
-                              >
-                                1BHK
-                              </Link>
-                              <Link
-                                to="/interior-kit/base/2bhk"
-                                className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors"
-                                onClick={() => setMobileMenuOpen(false)}
-                              >
-                                2BHK
-                              </Link>
-                              <Link
-                                to="/interior-kit/base/3bhk"
-                                className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors"
-                                onClick={() => setMobileMenuOpen(false)}
-                              >
-                                3BHK
-                              </Link>
-                            </div>
-                          </div>
+                          {["Base Tier", "Standard", "Premium"].map((tier) => (
+                            <div key={tier}>
+                              <div className="text-xs uppercase text-muted-foreground">
+                                {tier}
+                              </div>
 
-                          <div>
-                            <div className="text-xs uppercase tracking-wider text-muted-foreground mb-2">
-                              Standard
+                              <div className="ml-3 flex flex-col gap-1">
+                                {["1BHK", "2BHK", "3BHK"].map((size) => (
+                                  <Link
+                                    key={`${tier}-${size}`}
+                                    to={`/interior-kit/${tier
+                                      .toLowerCase()
+                                      .replace(" ", "")}/${size.toLowerCase()}`}
+                                    onClick={() => setMobileMenuOpen(false)}
+                                  >
+                                    {size}
+                                  </Link>
+                                ))}
+                              </div>
                             </div>
-                            <div className="flex flex-col gap-2 ml-2">
-                              <Link
-                                to="/interior-kit/standard/1bhk"
-                                className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors"
-                                onClick={() => setMobileMenuOpen(false)}
-                              >
-                                1BHK
-                              </Link>
-                              <Link
-                                to="/interior-kit/standard/2bhk"
-                                className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors"
-                                onClick={() => setMobileMenuOpen(false)}
-                              >
-                                2BHK
-                              </Link>
-                              <Link
-                                to="/interior-kit/standard/3bhk"
-                                className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors"
-                                onClick={() => setMobileMenuOpen(false)}
-                              >
-                                3BHK
-                              </Link>
-                            </div>
-                          </div>
-
-                          <div>
-                            <div className="text-xs uppercase tracking-wider text-muted-foreground mb-2">
-                              Premium
-                            </div>
-                            <div className="flex flex-col gap-2 ml-2">
-                              <Link
-                                to="/interior-kit/premium/1bhk"
-                                className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors"
-                                onClick={() => setMobileMenuOpen(false)}
-                              >
-                                1BHK
-                              </Link>
-                              <Link
-                                to="/interior-kit/premium/2bhk"
-                                className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors"
-                                onClick={() => setMobileMenuOpen(false)}
-                              >
-                                2BHK
-                              </Link>
-                              <Link
-                                to="/interior-kit/premium/3bhk"
-                                className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors"
-                                onClick={() => setMobileMenuOpen(false)}
-                              >
-                                3BHK
-                              </Link>
-                            </div>
-                          </div>
+                          ))}
                         </CollapsibleContent>
                       </Collapsible>
                     </div>
                   </nav>
 
-                  <div className="p-6 border-t border-border">
-                    <Button
-                      variant="outline"
-                      className="w-full border-foreground text-foreground hover:bg-foreground hover:text-background font-light tracking-wide"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
+                  {/* Mobile Footer Button */}
+                  <div className="p-6 border-t">
+                    <Button className="w-full font-light tracking-wide">
                       Get In Touch
                     </Button>
                   </div>
                 </div>
+
               </SheetContent>
             </Sheet>
           </div>
+
         </div>
       </div>
     </header>
