@@ -74,6 +74,11 @@ const Header = () => {
   Style Palette
 </NavigationMenuTrigger>
 
+
+
+
+
+
                 <NavigationMenuContent>
                   <ul className="grid w-[200px] gap-3 p-4 bg-background">
                     <li>
@@ -97,6 +102,18 @@ const Header = () => {
               </NavigationMenuItem>
 
               <NavigationMenuItem>
+
+
+
+
+
+
+
+
+
+
+
+                
 <NavigationMenuTrigger className="text-sm font-light tracking-wide text-white bg-transparent hover:bg-transparent">
   Interior Kit
 </NavigationMenuTrigger>
