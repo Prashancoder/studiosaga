@@ -34,14 +34,26 @@ const ClientLogoCard: React.FC<Client> = ({ name, logoUrl, link }) => {
     <a
       href={link}
       aria-label={`View ${name}`}
-      className="group p-6 flex items-center justify-center h-32 md:h-40 bg-white rounded-lg transition duration-300 ease-in-out hover:scale-[1.03] hover:shadow-lg"
+      className="
+        group 
+        p-7 
+        flex items-center justify-center 
+        h-36 md:h-44 
+        bg-white 
+        rounded-2xl 
+        shadow-[0_2px_10px_rgba(0,0,0,0.06)]
+        hover:shadow-[0_6px_20px_rgba(0,0,0,0.12)]
+        transition-all 
+        duration-500 
+        ease-out 
+        hover:scale-[1.04]"
       target="_blank"
       rel="noopener noreferrer"
     >
       <img
         src={logoUrl}
         alt={`${name} Logo`}
-        className="max-h-full max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+        className="max-h-full max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500"
         onError={(e) => {
           e.currentTarget.src = `https://placehold.co/200x80/E5E7EB/4B5563?text=${name}`;
         }}
@@ -55,24 +67,28 @@ const ClientLogoCard: React.FC<Client> = ({ name, logoUrl, link }) => {
 // ----------------------
 const ClientSection: React.FC = () => {
   return (
-    <section className="py-16 px-6 bg-[#F6F5F1] md:px-10 bg-gray-50">
-      <div className="max-w-7xl  mx-auto">
+    <section className="py-20 px-6 md:px-10 bg-[#F7F6F2]">
+      <div className="max-w-7xl mx-auto">
 
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 tracking-tight">
+        {/* Premium Heading */}
+        <div className="text-center mb-14">
+          <h2 className="text-4xl md:text-5xl font-serif font-semibold text-gray-900 tracking-wide">
             Our Clients
           </h2>
-          <p className="text-lg text-gray-500 mt-1">
-            Trusted by the best in the industry.
+          <p className="text-lg text-gray-600 mt-3 font-light">
+            Trusted by the best in real estate & global enterprises.
           </p>
+
+          {/* Decorative Line */}
+          <div className="mt-4 h-1 w-24 mx-auto bg-[#D4AF37] rounded-full shadow-md"></div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+        {/* Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
           {clientLogos.map((client) => (
             <ClientLogoCard key={client.id} {...client} />
           ))}
         </div>
-
       </div>
     </section>
   );

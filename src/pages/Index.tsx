@@ -7,6 +7,7 @@ import StudiasagaDisplay from "@/components/StudiasagaDisplay";
 import MediaSection from '@/components/MediaSection';
 // import InstagramPost from "@/components/InstagramPost;
 import ClientSection from "@/components/clients";
+import ChalkTVSection from '@/components/ChalkTVSection'; 
 
 
 const Index = () => {
@@ -52,10 +53,12 @@ const Index = () => {
         
         <MediaSection />
         <ClientSection />
+        <ChalkTVSection />
+
 
       
         {/* Services Preview */}
-        <section className="py-24 bg-luxury-beige">
+        {/* <section className="py-24 bg-luxury-beige">
           <div className="container mx-auto px-6">
             <h2 className="text-3xl md:text-4xl font-extralight tracking-wide text-center mb-16 uppercase">
               Our Services
@@ -93,7 +96,10 @@ const Index = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
+
+
+
       </main>
     <StudiasagaDisplay/>
     {/* <InstagramPost /> */}
