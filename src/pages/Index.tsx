@@ -4,6 +4,10 @@ import HeroCarousel from "@/components/HeroCarousel";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import StudiasagaDisplay from "@/components/StudiasagaDisplay";
+import MediaSection from '@/components/MediaSection';
+// import InstagramPost from "@/components/InstagramPost;
+import ClientSection from "@/components/clients";
+
 
 const Index = () => {
   return (
@@ -14,7 +18,7 @@ const Index = () => {
         <HeroCarousel />
 
         {/* About Section */}
-        <section className="py-24 px-6">
+<section className="py-24 bg-[#E9E7DE] px-6">
           <div className="container mx-auto max-w-4xl text-center">
             <h2 className="text-3xl md:text-5xl font-extralight tracking-wide mb-8 uppercase">
               StudiaSaga is an Interior Design Firm that Believes in
@@ -45,7 +49,11 @@ const Index = () => {
             </Button>
           </div>
         </section>
+        
+        <MediaSection />
+        <ClientSection />
 
+      
         {/* Services Preview */}
         <section className="py-24 bg-luxury-beige">
           <div className="container mx-auto px-6">
@@ -88,9 +96,15 @@ const Index = () => {
         </section>
       </main>
     <StudiasagaDisplay/>
+    {/* <InstagramPost /> */}
+    
+    
       <Footer />
     </div>
   );
 };
 
 export default Index;
+
+
+
