@@ -157,12 +157,18 @@ const Header = () => {
 
           {/* Button + Mobile Toggle */}
           <div className="flex items-center gap-4">
-            <Button
-              variant="outline"
-              className={`hidden md:inline-flex font-light tracking-wide ${buttonClasses}`}
-            >
-              Get In Touch
-            </Button>
+<Button
+  variant="outline"
+  className={`
+    hidden md:inline-flex font-light tracking-wide 
+    bg-[#E9E7DE] text-black border-[#E9E7DE]
+    hover:bg-[#d6d3c9] hover:text-black hover:border-[#d6d3c9]
+  `}
+>
+  Get In Touch
+</Button>
+
+
 
             {/* Mobile Menu */}
             <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
