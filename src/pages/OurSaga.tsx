@@ -1,6 +1,10 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
+import About2 from "@/extracomponents/about2";
+import About3 from "@/extracomponents/About3";
+import BlogsCarousel from "@/components/BlogsCarousel";
+
 
 const videoSources = ["/images/1.mp4", "/images/2.mp4"];
 
@@ -18,6 +22,7 @@ const OurSaga = () => {
   return (
     <div className="min-h-screen">
       <Header />
+   
 
       {/* ================== HERO BANNER WITH VIDEO SLIDES ================== */}
       <div className="relative w-full h-[100vh] overflow-hidden">
@@ -42,6 +47,13 @@ const OurSaga = () => {
           </h1>
         </div>
       </div>
+
+
+         <About2 />
+         <About3 />
+         <BlogsCarousel />
+
+
 
       {/* ================== MAIN CONTENT ================== */}
       <main className="pt-24 pb-24">
@@ -109,6 +121,7 @@ const OurSaga = () => {
         </div>
       </main>
 
+      
       <Footer />
     </div>
   );
