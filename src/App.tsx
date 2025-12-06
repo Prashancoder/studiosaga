@@ -11,6 +11,7 @@ import InteriorKitStandard from "./pages/InteriorKitStandard";
 import InteriorKitPremium from "./pages/InteriorKitPremium";
 import NotFound from "./pages/NotFound";
 import Services from "./pages/services";
+import Contact from "./pages/Contact";
 
 
 const queryClient = new QueryClient();
@@ -26,7 +27,7 @@ const App = () => (
           <Route path="/our-saga" element={<OurSaga />} />
 
 
-
+          <Route path="/Contact" element={<Contact />} />
           <Route path="/services" element={<Services />} />
           <Route path="/style-palette" element={<StylePalette />} />
           <Route path="/interior-kit/base/:size" element={<InteriorKitBase />} />

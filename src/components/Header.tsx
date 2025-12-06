@@ -110,6 +110,12 @@ const Header = () => {
 
 
 
+              {/* NEW: Services (Direct Link) */}
+              <NavigationMenuItem>
+                <Link to="/Contact" className={navLinkClass}>
+                  Contact
+                </Link>
+              </NavigationMenuItem>
 
 
 
@@ -195,6 +201,13 @@ const Header = () => {
                         Services
                       </Link>
 
+                      <Link
+                        to="/Contact"
+                        className="text-base font-light text-foreground"
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        Contact
+                      </Link>
 
 
 
