@@ -5,11 +5,11 @@ import About2 from "@/extracomponents/about2";
 import About3 from "@/extracomponents/About3";
 import BlogsCarousel from "@/components/BlogsCarousel";
 
-
 const videoSources = ["/images/1.mp4", "/images/2.mp4"];
 
 const OurSaga = () => {
   const [currentVideo, setCurrentVideo] = useState(0);
+
 
   useEffect(() => {
     const interval = setInterval(() => {

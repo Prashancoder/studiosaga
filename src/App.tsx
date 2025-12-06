@@ -5,12 +5,13 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import OurSaga from "./pages/OurSaga";
-import StylePaletteMinimalist from "./pages/StylePaletteMinimalist";
-import StylePaletteIndustrial from "./pages/StylePaletteIndustrial";
+import StylePalette from "./pages/StylePalette";
 import InteriorKitBase from "./pages/InteriorKitBase";
 import InteriorKitStandard from "./pages/InteriorKitStandard";
 import InteriorKitPremium from "./pages/InteriorKitPremium";
 import NotFound from "./pages/NotFound";
+import Services from "./pages/services";
+
 
 const queryClient = new QueryClient();
 
@@ -23,8 +24,11 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/our-saga" element={<OurSaga />} />
-          <Route path="/style-palette/minimalist" element={<StylePaletteMinimalist />} />
-          <Route path="/style-palette/industrial" element={<StylePaletteIndustrial />} />
+
+
+
+          <Route path="/services" element={<Services />} />
+          <Route path="/style-palette" element={<StylePalette />} />
           <Route path="/interior-kit/base/:size" element={<InteriorKitBase />} />
           <Route path="/interior-kit/standard/:size" element={<InteriorKitStandard />} />
           <Route path="/interior-kit/premium/:size" element={<InteriorKitPremium />} />

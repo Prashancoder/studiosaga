@@ -46,6 +46,9 @@ const Header = () => {
     : "border-white text-white hover:bg-white hover:text-background";
 
   const navTriggerClass = `text-sm font-light tracking-wide bg-transparent hover:bg-transparent ${textColor} hover:text-luxury-brown`;
+   
+  const navLinkClass = `text-sm font-light tracking-wide hover:text-luxury-brown transition-colors ${textColor} bg-transparent`;
+
 
   return (
     <header
@@ -88,69 +91,29 @@ const Header = () => {
                 </Link>
               </NavigationMenuItem>
 
-              {/* Style Palette */}
+
+            {/* NEW: Style Pal (Direct Link) */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className={navTriggerClass}>
+                <Link to="/style-palette" className={navLinkClass}>
                   Style Palette
-                </NavigationMenuTrigger>
-
-                <NavigationMenuContent>
-                  <ul className="grid w-[200px] gap-1 p-2 bg-background shadow-lg rounded-md border">
-                    <li>
-                      <Link
-                        to="/style-palette/minimalist"
-                        className="block rounded-md p-3 text-sm font-light hover:bg-accent hover:text-accent-foreground"
-                      >
-                        Minimalist
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/style-palette/industrial"
-                        className="block rounded-md p-3 text-sm font-light hover:bg-accent hover:text-accent-foreground"
-                      >
-                        Industrial
-                      </Link>
-                    </li>
-                  </ul>
-                </NavigationMenuContent>
+                </Link>
               </NavigationMenuItem>
 
-              {/* Interior Kit */}
+
+
+              {/* NEW: Services (Direct Link) */}
               <NavigationMenuItem>
-                <NavigationMenuTrigger className={navTriggerClass}>
-                  Interior Kit
-                </NavigationMenuTrigger>
-
-                <NavigationMenuContent>
-                  <div className="grid grid-cols-3 w-[550px] gap-6 p-6 bg-background shadow-xl rounded-lg border">
-
-                    {[
-                      ["Base Tier", "base"],
-                      ["Standard", "standard"],
-                      ["Premium", "premium"]
-                    ].map(([title, segment]) => (
-                      <div key={segment}>
-                        <h4 className="font-semibold text-sm uppercase tracking-wider text-muted-foreground mb-3">
-                          {title}
-                        </h4>
-                        <div className="flex flex-col space-y-1">
-                          {["1BHK", "2BHK", "3BHK"].map((size) => (
-                            <Link
-                              key={`${segment}-${size}`}
-                              to={`/interior-kit/${segment}/${size.toLowerCase()}`}
-                              className="text-sm font-light p-2 rounded-md hover:bg-accent hover:text-accent-foreground"
-                            >
-                              {size}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-
-                  </div>
-                </NavigationMenuContent>
+                <Link to="/services" className={navLinkClass}>
+                  Services
+                </Link>
               </NavigationMenuItem>
+
+
+
+
+
+
+
 
             </NavigationMenuList>
           </NavigationMenu>
@@ -214,64 +177,27 @@ const Header = () => {
                         Our Saga
                       </Link>
 
-                      {/* Style Palette Mobile */}
-                      <Collapsible
-                        open={stylePaletteOpen}
-                        onOpenChange={setStylePaletteOpen}
+{/* NEW: Style Pal Mobile */}
+                      <Link
+                        to="/style-palette"
+                        className="text-base font-light text-foreground"
+                        onClick={() => setMobileMenuOpen(false)}
                       >
-                        <CollapsibleTrigger className="flex items-center justify-between text-base font-light">
-                          Style Palette
-                          <ChevronDown
-                            className={`h-4 w-4 transition-transform ${
-                              stylePaletteOpen ? "rotate-180" : ""
-                            }`}
-                          />
-                        </CollapsibleTrigger>
+                        style palette
+                      </Link>
 
-                        <CollapsibleContent className="mt-3 ml-4 flex flex-col gap-3">
-                          <Link to="/style-palette/minimalist">Minimalist</Link>
-                          <Link to="/style-palette/industrial">Industrial</Link>
-                        </CollapsibleContent>
-                      </Collapsible>
-
-                      {/* Interior Kit Mobile */}
-                      <Collapsible
-                        open={interiorKitOpen}
-                        onOpenChange={setInteriorKitOpen}
+                      {/* NEW: Services Mobile */}
+                      <Link
+                        to="/services"
+                        className="text-base font-light text-foreground"
+                        onClick={() => setMobileMenuOpen(false)}
                       >
-                        <CollapsibleTrigger className="flex items-center justify-between text-base font-light">
-                          Interior Kit
-                          <ChevronDown
-                            className={`h-4 w-4 transition-transform ${
-                              interiorKitOpen ? "rotate-180" : ""
-                            }`}
-                          />
-                        </CollapsibleTrigger>
+                        Services
+                      </Link>
 
-                        <CollapsibleContent className="mt-3 ml-4 flex flex-col gap-4">
-                          {["Base Tier", "Standard", "Premium"].map((tier) => (
-                            <div key={tier}>
-                              <div className="text-xs uppercase text-muted-foreground">
-                                {tier}
-                              </div>
 
-                              <div className="ml-3 flex flex-col gap-1">
-                                {["1BHK", "2BHK", "3BHK"].map((size) => (
-                                  <Link
-                                    key={`${tier}-${size}`}
-                                    to={`/interior-kit/${tier
-                                      .toLowerCase()
-                                      .replace(" ", "")}/${size.toLowerCase()}`}
-                                    onClick={() => setMobileMenuOpen(false)}
-                                  >
-                                    {size}
-                                  </Link>
-                                ))}
-                              </div>
-                            </div>
-                          ))}
-                        </CollapsibleContent>
-                      </Collapsible>
+
+
                     </div>
                   </nav>
 

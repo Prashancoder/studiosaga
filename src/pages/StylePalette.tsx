@@ -5,7 +5,8 @@ import HeroCarousel from "@/components/HeroCarousel";
 
 
 
-const StylePaletteIndustrial = () => {
+
+const StylePalette = () => {
   return (
     <div className="min-h-screen">
       <Header />
@@ -91,4 +92,4 @@ const StylePaletteIndustrial = () => {
   );
 };
 
-export default StylePaletteIndustrial;
+export default StylePalette ;
