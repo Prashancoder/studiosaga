@@ -3,10 +3,14 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Shield, Phone, Mail, MapPin } from "lucide-react";
+import { Shield, Phone, Mail, MapPin, ArrowRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
-export default function Contact () {
+
+
+export default function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const { toast } = useToast();
@@ -31,8 +35,8 @@ export default function Contact () {
 
       if (response.ok) {
         toast({
-          title: "Thank you!",
-          description: "We'll get back to you within 24 hours.",
+          title: "Inquiry Received",
+          description: "Our design team will be in touch shortly.",
         });
         form.reset();
       } else {
@@ -40,8 +44,8 @@ export default function Contact () {
       }
     } catch (error) {
       toast({
-        title: "Something went wrong",
-        description: "Please try again or call us directly.",
+        title: "Submission Error",
+        description: "Please try again or contact us directly.",
         variant: "destructive",
       });
     } finally {
@@ -50,167 +54,164 @@ export default function Contact () {
   };
 
   return (
-    <main className="min-h-screen bg-background">
-      {/* Optional: You can add a Navbar component here */}
+    <main className="min-h-screen bg-background text-foreground">
+
+                    <Header />
       
-      <section id="contact" className="py-24 md:py-32 bg-secondary/30">
+      
+      {/* --- 1. LUXURY BANNER SECTION --- */}
+      <section className="relative w-full h-[50vh] min-h-[400px] lg:h-[80vh] overflow-hidden">
+        
+        {/* SIMPLE HTML IMG TAG (No Config Needed) */}
+        <img 
+          src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop"
+          alt="Luxury Interior"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/40" />
+
+        {/* Banner Content */}
+        <div className="relative z-10 container mx-auto px-6 h-full flex flex-col justify-center items-center text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <p className="text-white/90 text-xs md:text-sm font-medium tracking-[0.3em] uppercase mb-4">
+              Studiasaga Interiors
+            </p>
+            <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white mb-6">
+              Contact Us
+            </h1>
+            <div className="w-24 h-[1px] bg-white/60 mx-auto"></div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* --- 2. MAIN CONTENT SECTION --- */}
+      <section className="py-24 lg:py-32">
         <div className="container mx-auto px-6">
-          <div ref={ref} className="grid lg:grid-cols-2 gap-12 lg:gap-20">
-            {/* Left Side: Contact Information */}
+          <div ref={ref} className="grid lg:grid-cols-12 gap-12 lg:gap-20">
+            
+            {/* Left Side: Contact Info */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
+              className="lg:col-span-5 flex flex-col justify-center"
+              initial={{ opacity: 0, x: -30 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <p className="text-primary text-sm font-medium tracking-[0.2em] uppercase mb-4">
+              <span className="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-6 flex items-center gap-2">
+                <span className="w-8 h-[1px] bg-primary"></span>
                 Get In Touch
-              </p>
-              <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight mb-6">
-                Let's Discuss
-                <span className="text-primary"> Your Project</span>
+              </span>
+              
+              <h2 className="font-serif text-4xl md:text-5xl text-foreground leading-tight mb-8">
+                Let’s Craft Your <br />
+                <span className="italic text-muted-foreground">Dream Space</span>
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-                Ready to transform your space? Fill out the form and our design experts will contact you within 24 hours to schedule your free consultation.
+              
+              <p className="text-muted-foreground text-lg leading-relaxed font-light mb-12">
+                Whether you are looking to renovate your home or design a new office, our team is ready to bring your vision to life with elegance.
               </p>
 
-              {/* Contact Details Icons */}
-              <div className="space-y-6">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Phone className="w-5 h-5 text-primary" />
+              <div className="space-y-8">
+                {/* Phone */}
+                <div className="flex items-start gap-6 group">
+                  <div className="w-10 h-10 border border-border rounded-full flex items-center justify-center group-hover:border-primary transition-colors duration-300">
+                    <Phone className="w-4 h-4 text-foreground group-hover:text-primary transition-colors" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Call Us</p>
-                    <p className="font-medium text-foreground">+91 9667733382</p>
+                    <p className="text-xs font-semibold tracking-wider uppercase text-muted-foreground mb-1">Call Us</p>
+                    <p className="font-serif text-xl text-foreground">+91 9667733382</p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Mail className="w-5 h-5 text-primary" />
+                {/* Email */}
+                <div className="flex items-start gap-6 group">
+                  <div className="w-10 h-10 border border-border rounded-full flex items-center justify-center group-hover:border-primary transition-colors duration-300">
+                    <Mail className="w-4 h-4 text-foreground group-hover:text-primary transition-colors" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Email Us</p>
-                    <p className="font-medium text-foreground">studiasaga94@gmail.com</p>
+                    <p className="text-xs font-semibold tracking-wider uppercase text-muted-foreground mb-1">Email Us</p>
+                    <p className="font-serif text-xl text-foreground">studiasaga94@gmail.com</p>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <MapPin className="w-5 h-5 text-primary" />
+                {/* Location */}
+                <div className="flex items-start gap-6 group">
+                  <div className="w-10 h-10 border border-border rounded-full flex items-center justify-center group-hover:border-primary transition-colors duration-300">
+                    <MapPin className="w-4 h-4 text-foreground group-hover:text-primary transition-colors" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Visit Us</p>
-                    <p className="font-medium text-foreground">Gurugram, India</p>
+                    <p className="text-xs font-semibold tracking-wider uppercase text-muted-foreground mb-1">Visit Studio</p>
+                    <p className="font-serif text-xl text-foreground">Gurugram, India</p>
                   </div>
                 </div>
               </div>
             </motion.div>
 
-            {/* Right Side: The Form */}
+            {/* Right Side: Form */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              className="lg:col-span-7"
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             >
               <form
                 onSubmit={handleSubmit}
-                className="bg-card rounded-2xl p-8 shadow-xl"
+                className="bg-card p-8 md:p-12 rounded-sm border border-border/50 shadow-2xl shadow-black/5"
               >
-                <div className="space-y-5">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                      Full Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
-                      placeholder="Your full name"
-                    />
+                <div className="grid md:grid-cols-2 gap-8 mb-8">
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Full Name</label>
+                    <input type="text" name="name" required placeholder="John Doe" className="w-full bg-transparent border-b border-border py-3 focus:outline-none focus:border-primary transition-colors text-lg placeholder:text-muted-foreground/30 font-serif" />
                   </div>
-
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
-                      Phone Number <span className="text-destructive">*</span>
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      required
-                      className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
-                      placeholder="+91 9667733382"
-                    />
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Phone</label>
+                    <input type="tel" name="phone" required placeholder="+91 ..." className="w-full bg-transparent border-b border-border py-3 focus:outline-none focus:border-primary transition-colors text-lg placeholder:text-muted-foreground/30 font-serif" />
                   </div>
+                </div>
 
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
-                      placeholder="you@example.com"
-                    />
+                <div className="grid md:grid-cols-2 gap-8 mb-8">
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Email</label>
+                    <input type="email" name="email" placeholder="john@example.com" className="w-full bg-transparent border-b border-border py-3 focus:outline-none focus:border-primary transition-colors text-lg placeholder:text-muted-foreground/30 font-serif" />
                   </div>
-
-                  <div>
-                    <label htmlFor="city" className="block text-sm font-medium text-foreground mb-2">
-                      City
-                    </label>
-                    <input
-                      type="text"
-                      id="city"
-                      name="city"
-                      className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all"
-                      placeholder="Your city"
-                    />
+                  <div className="space-y-2">
+                    <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">City</label>
+                    <input type="text" name="city" placeholder="Gurugram" className="w-full bg-transparent border-b border-border py-3 focus:outline-none focus:border-primary transition-colors text-lg placeholder:text-muted-foreground/30 font-serif" />
                   </div>
+                </div>
 
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={4}
-                      className="w-full px-4 py-3 rounded-lg border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all resize-none"
-                      placeholder="Tell us about your project..."
-                    />
+                <div className="space-y-2 mb-10">
+                  <label className="text-xs font-bold uppercase tracking-wider text-muted-foreground">Message</label>
+                  <textarea name="message" rows={3} placeholder="Tell us about your project..." className="w-full bg-transparent border-b border-border py-3 focus:outline-none focus:border-primary transition-colors text-lg resize-none placeholder:text-muted-foreground/30 font-serif" />
+                </div>
+
+                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                   <div className="flex items-center gap-2 text-muted-foreground/70">
+                    <Shield className="w-4 h-4" />
+                    <span className="text-xs uppercase tracking-wide">Privacy Guaranteed</span>
                   </div>
 
                   <motion.button
                     type="submit"
                     disabled={isSubmitting}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full py-4 bg-primary text-primary-foreground rounded-lg font-medium text-lg tracking-wide hover:bg-primary/90 transition-all disabled:opacity-70 disabled:cursor-not-allowed"
+                    whileHover={{ scale: 1.01 }}
+                    whileTap={{ scale: 0.99 }}
+                    className="px-10 py-4 bg-primary text-primary-foreground text-sm font-bold uppercase tracking-widest hover:bg-primary/90 transition-all disabled:opacity-70 flex items-center gap-3"
                   >
-                    {isSubmitting ? "Submitting..." : "Book Free Consultation"}
+                    {isSubmitting ? "Sending..." : "Send Request"}
+                    {!isSubmitting && <ArrowRight className="w-4 h-4" />}
                   </motion.button>
-
-                  {/* Trust Badge */}
-                  <div className="flex items-center justify-center gap-2 text-muted-foreground">
-                    <Shield className="w-4 h-4" />
-                    <span className="text-sm">100% Privacy Guaranteed</span>
-                  </div>
                 </div>
               </form>
             </motion.div>
           </div>
         </div>
       </section>
-      
-      {/* Optional: You can add a Footer component here */}
     </main>
   );
 }
-
-
-
