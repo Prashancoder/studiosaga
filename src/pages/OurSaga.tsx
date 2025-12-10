@@ -362,8 +362,18 @@ const OurSaga = () => {
             </div>
           </div>
         </section> */}
+  
 
-
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
       {/* ================== EXPERTISE SECTION (EDITORIAL STYLE) ================== */}
         <section className="py-32 bg-[#FDFCFB] overflow-hidden"> {/* Using a very subtle off-white background */}
           <div className="container mx-auto px-6 max-w-7xl space-y-32"> {/* Increased spacing between rows */}
@@ -459,6 +469,132 @@ const OurSaga = () => {
             })}
           </div>
         </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section className="py-24 bg-[#FDFCFB] overflow-hidden">
+          <div className="container mx-auto px-6 max-w-6xl">
+            
+            {/* Header */}
+            <div className="text-center mb-24">
+               <span className="text-primary text-xs font-bold tracking-[0.25em] uppercase">The Process</span>
+               <h2 className="font-serif text-5xl text-stone-900 mt-4">
+                 Our Design <span className="italic text-stone-500">Journey</span>
+               </h2>
+               <p className="text-stone-500 mt-4 max-w-lg mx-auto font-light">
+                 From the first sketch to the final pillow placement, follow the path we take to craft your dream space.
+               </p>
+            </div>
+
+            <div className="relative">
+              {/* --- THE CENTRAL SPINE (MAP LINE) --- */}
+              {/* This line runs down the middle on desktop, and left side on mobile */}
+              <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-[2px] bg-stone-200 -translate-x-1/2"></div>
+
+              {/* Steps Loop */}
+              {expertise2.map((item, idx) => {
+                const isEven = idx % 2 === 0;
+
+                return (
+                  <motion.div 
+                    key={idx}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.6, delay: idx * 0.1 }}
+                    className={`relative flex items-center justify-between mb-24 md:mb-32 ${
+                      isEven ? "md:flex-row" : "md:flex-row-reverse"
+                    }`}
+                  >
+                    
+                    {/* --- THE CONTENT CARD (Text) --- */}
+                    <div className="w-full md:w-[45%] pl-20 md:pl-0">
+                      <div className={`bg-white p-8 rounded-xl shadow-sm border border-stone-100 relative group hover:shadow-xl transition-all duration-300 ${isEven ? 'md:text-right' : 'md:text-left'}`}>
+                        
+                        {/* Decorative Number */}
+                        <span className={`absolute -top-6 text-6xl font-serif text-stone-100 font-bold ${isEven ? 'right-4' : 'left-4'}`}>
+                          0{idx + 1}
+                        </span>
+
+                        <div className={`flex items-center gap-3 mb-4 ${isEven ? 'md:justify-end' : 'md:justify-start'}`}>
+                           <item.icon className="w-6 h-6 text-primary" />
+                           <h3 className="font-serif text-2xl text-stone-800">{item.title}</h3>
+                        </div>
+
+                        <p className="text-stone-500 font-light leading-relaxed text-sm">
+                          {item.desc}
+                        </p>
+                        
+                        {/* Small decorative arrow inside card */}
+                        <div className={`mt-4 text-xs font-bold text-primary uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 ${isEven ? 'md:justify-end' : 'md:justify-start'}`}>
+                           Explore Phase <div className="h-[1px] w-8 bg-primary"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* --- THE CENTRAL CONNECTOR (DOT) --- */}
+                    <div className="absolute left-8 md:left-1/2 -translate-x-1/2 flex items-center justify-center">
+                      {/* Outer Ring */}
+                      <div className="w-8 h-8 rounded-full border border-primary/30 bg-[#FDFCFB] flex items-center justify-center z-10">
+                        {/* Inner Dot */}
+                        <div className="w-3 h-3 bg-primary rounded-full"></div>
+                      </div>
+                      
+                      {/* Pulse Effect */}
+                      <div className="absolute w-12 h-12 bg-primary/10 rounded-full animate-ping opacity-20"></div>
+                    </div>
+
+                    {/* --- THE IMAGE (Smaller & Styled) --- */}
+                    <div className="hidden md:block w-[45%]">
+                      {/* Connector Line from Center to Image */}
+                      <div className={`absolute top-1/2 h-[1px] bg-stone-300 w-[10%] ${isEven ? 'left-[50%]' : 'right-[50%]'}`}></div>
+                      
+                      {/* Image Frame */}
+                      <div className={`relative w-64 h-64 mx-auto rotate-3 transition-transform duration-500 hover:rotate-0 hover:scale-105 ${isEven ? 'mr-auto ml-12' : 'ml-auto mr-12'}`}>
+                        <div className="absolute inset-0 border-2 border-stone-200 rounded-2xl transform translate-x-3 translate-y-3"></div>
+                        <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg bg-white p-1">
+                          <img 
+                            src={item.image} 
+                            alt={item.title} 
+                            className="w-full h-full object-cover rounded-xl"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                  </motion.div>
+                );
+              })}
+
+              {/* End Circle */}
+              <div className="absolute left-8 md:left-1/2 bottom-0 w-4 h-4 bg-stone-300 rounded-full -translate-x-1/2 translate-y-1/2"></div>
+            </div>
+            
+          </div>
+        </section>
+
+
+
+
+
+
+
+
 
 
 

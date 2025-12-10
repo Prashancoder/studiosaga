@@ -19,7 +19,7 @@ interface InstagramPostCardProps extends InstagramPost {}
 const instagramPosts: InstagramPost[] = [
   {
     id: 'post1',
-    username: 'chalkstudio.design',
+    username: 'StudiaSaga',
     profileLink: 'https://www.instagram.com/chalkstudio.design/',
     imageUrl: "https://images.pexels.com/photos/1080696/pexels-photo-1080696.jpeg",
     postUrl: 'https://www.instagram.com/p/Cva_r4vRldA/',
@@ -28,7 +28,7 @@ const instagramPosts: InstagramPost[] = [
   },
   {
     id: 'post2',
-    username: 'chalkstudio.design',
+    username: 'StudiaSaga',
     profileLink: 'https://www.instagram.com/chalkstudio.design/',
     imageUrl: "https://images.pexels.com/photos/1129413/pexels-photo-1129413.jpeg",
     postUrl: 'https://www.instagram.com/p/CtX3Y0OASpC/',
@@ -37,7 +37,7 @@ const instagramPosts: InstagramPost[] = [
   },
   {
     id: 'post3',
-    username: 'chalkstudio.design',
+    username: 'StudiaSaga',
     profileLink: 'https://www.instagram.com/chalkstudio.design/',
     imageUrl: "https://images.pexels.com/photos/827518/pexels-photo-827518.jpeg",
     postUrl: 'https://www.instagram.com/p/CvX-23bJvWs/',
@@ -46,7 +46,7 @@ const instagramPosts: InstagramPost[] = [
   },
   {
     id: 'post4',
-    username: 'chalkstudio.design',
+    username: 'StudiaSaga',
     profileLink: 'https://www.instagram.com/chalkstudio.design/',
     imageUrl: "https://images.pexels.com/photos/1374125/pexels-photo-1374125.jpeg",
     postUrl: 'https://www.instagram.com/p/CwY-01cKxYx/',
@@ -55,7 +55,7 @@ const instagramPosts: InstagramPost[] = [
   },
   {
     id: 'post5',
-    username: 'chalkstudio.design',
+    username: 'StudiaSaga',
     profileLink: 'https://www.instagram.com/chalkstudio.design/',
     imageUrl: "https://images.pexels.com/photos/2067638/pexels-photo-2067638.jpeg",
     postUrl: 'https://www.instagram.com/p/CvZ-01cKxYx/',
