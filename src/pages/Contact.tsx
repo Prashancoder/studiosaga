@@ -69,7 +69,7 @@ export default function Contact() {
           className="absolute inset-0 w-full h-full object-cover"
         />
         
-        {/* Dark Overlay */}
+        {/* Dark sdsdsdsd Overlay */}
         <div className="absolute inset-0 bg-black/40" />
 
         {/* Banner Content */}
