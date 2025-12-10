@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
-import About2 from "@/extracomponents/about2";
 import About3 from "@/extracomponents/About3";
 import BlogsCarousel from "@/components/BlogsCarousel";
 
@@ -49,7 +48,6 @@ const OurSaga = () => {
       </div>
 
 
-         <About2 />
          <About3 />
          <BlogsCarousel />
 
