@@ -2,6 +2,9 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PremiumApproach from "@/components/PremiumApproach";
+import PremiumServices from "@/components/PremiumServices";
+import WhyChooseUs from "@/components/WhyChooseUs";
 import { useEffect, useState } from "react";
 import About3 from "@/extracomponents/About3";
 import BlogsCarousel from "@/components/BlogsCarousel";
@@ -339,6 +342,10 @@ const OurSaga = () => {
 
 
 
+
+
+
+
         {/* ================== EXPERTISE GRID ================== */}
         {/* <section className="py-24">
           <div className="container mx-auto px-6 max-w-6xl">
@@ -364,111 +371,6 @@ const OurSaga = () => {
         </section> */}
   
 
-     
-     
-     
-     
-     
-     
-     
-     
-     
-     
-      {/* ================== EXPERTISE SECTION (EDITORIAL STYLE) ================== */}
-        <section className="py-32 bg-[#FDFCFB] overflow-hidden"> {/* Using a very subtle off-white background */}
-          <div className="container mx-auto px-6 max-w-7xl space-y-32"> {/* Increased spacing between rows */}
-            
-            {/* Section Header */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-24"
-            >
-               {/* A subtle decorative line */}
-              <div className="w-16 h-[1px] bg-primary mx-auto mb-6"></div>
-              <h2 className="font-serif text-5xl md:text-6xl text-stone-900 mb-6">
-                The Art of <span className="italic text-stone-600">Execution</span>
-              </h2>
-              <p className="text-stone-600 max-w-xl mx-auto text-lg font-light leading-relaxed">
-                Our expertise lies not just in vision, but in the precise orchestration of every detail that brings that vision to life.
-              </p>
-            </motion.div>
-
-            {/* Editorial Rows */}
-            {expertise2.map((item, idx) => {
-              // Logic to alternate left/right alignment
-              const isEven = idx % 2 === 0;
-              
-              return (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.7, ease: "easeOut" }}
-                  className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 lg:gap-24 items-center`}
-                >
-                  
-                  {/* TEXT BLOCK */}
-                  <div className="flex-1 relative">
-                    {/* Giant Background Number for style */}
-                    <span className="absolute -top-20 -left-12 text-[12rem] font-serif text-stone-100/80 select-none -z-10 leading-none">
-                      0{idx + 1}
-                    </span>
-
-                    <div className="relative z-10">
-                      {/* Icon & Subtitle */}
-                      <div className="flex items-center gap-3 mb-6">
-                        <div className="p-3 bg-primary/10 text-primary rounded-full">
-                          <item.icon className="w-5 h-5" />
-                        </div>
-                        <span className="text-xs font-bold tracking-[0.25em] uppercase text-primary">
-                          Service &mdash; 0{idx + 1}
-                        </span>
-                      </div>
-
-                      {/* Main Title */}
-                      <h3 className="font-serif text-4xl md:text-5xl text-stone-900 mb-6 leading-tight">
-                        {item.title}
-                      </h3>
-
-                      {/* Decorative short line */}
-                      <div className="w-12 h-[2px] bg-stone-200 mb-6"></div>
-
-                      {/* Description */}
-                      <p className="text-stone-600 text-lg leading-relaxed font-light max-w-md">
-                        {item.desc}
-                        <br className="hidden lg:block"/> {/* Force line break for aesthetic */}
-                        We ensure every detail aligns with your lifestyle, creating spaces that are both beautiful and deeply functional.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* IMAGE BLOCK */}
-                  <div className="flex-1 w-full">
-                    {/* Image Frame with Offset Border Effect */}
-                    <div className="relative h-[400px] lg:h-[550px] w-full group">
-                      {/* The Border outline (offset) */}
-                      <div className={`absolute inset-0 border-2 border-primary/30 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2 rounded-sm z-0
-                         ${isEven ? 'translate-x-4 translate-y-4' : '-translate-x-4 translate-y-4'}`}></div>
-                      
-                      {/* The Main Image */}
-                      <div className="relative h-full w-full overflow-hidden rounded-sm shadow-xl z-10 bg-white p-2 border border-stone-100">
-                         <img 
-                           src={item.image} 
-                           alt={item.title} 
-                           className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                         />
-                      </div>
-                    </div>
-                  </div>
-
-                </motion.div>
-              );
-            })}
-          </div>
-        </section>
 
 
 
@@ -487,107 +389,7 @@ const OurSaga = () => {
 
 
 
-        <section className="py-24 bg-[#FDFCFB] overflow-hidden">
-          <div className="container mx-auto px-6 max-w-6xl">
-            
-            {/* Header */}
-            <div className="text-center mb-24">
-               <span className="text-primary text-xs font-bold tracking-[0.25em] uppercase">The Process</span>
-               <h2 className="font-serif text-5xl text-stone-900 mt-4">
-                 Our Design <span className="italic text-stone-500">Journey</span>
-               </h2>
-               <p className="text-stone-500 mt-4 max-w-lg mx-auto font-light">
-                 From the first sketch to the final pillow placement, follow the path we take to craft your dream space.
-               </p>
-            </div>
-
-            <div className="relative">
-              {/* --- THE CENTRAL SPINE (MAP LINE) --- */}
-              {/* This line runs down the middle on desktop, and left side on mobile */}
-              <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-[2px] bg-stone-200 -translate-x-1/2"></div>
-
-              {/* Steps Loop */}
-              {expertise2.map((item, idx) => {
-                const isEven = idx % 2 === 0;
-
-                return (
-                  <motion.div 
-                    key={idx}
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 0.6, delay: idx * 0.1 }}
-                    className={`relative flex items-center justify-between mb-24 md:mb-32 ${
-                      isEven ? "md:flex-row" : "md:flex-row-reverse"
-                    }`}
-                  >
-                    
-                    {/* --- THE CONTENT CARD (Text) --- */}
-                    <div className="w-full md:w-[45%] pl-20 md:pl-0">
-                      <div className={`bg-white p-8 rounded-xl shadow-sm border border-stone-100 relative group hover:shadow-xl transition-all duration-300 ${isEven ? 'md:text-right' : 'md:text-left'}`}>
-                        
-                        {/* Decorative Number */}
-                        <span className={`absolute -top-6 text-6xl font-serif text-stone-100 font-bold ${isEven ? 'right-4' : 'left-4'}`}>
-                          0{idx + 1}
-                        </span>
-
-                        <div className={`flex items-center gap-3 mb-4 ${isEven ? 'md:justify-end' : 'md:justify-start'}`}>
-                           <item.icon className="w-6 h-6 text-primary" />
-                           <h3 className="font-serif text-2xl text-stone-800">{item.title}</h3>
-                        </div>
-
-                        <p className="text-stone-500 font-light leading-relaxed text-sm">
-                          {item.desc}
-                        </p>
-                        
-                        {/* Small decorative arrow inside card */}
-                        <div className={`mt-4 text-xs font-bold text-primary uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 ${isEven ? 'md:justify-end' : 'md:justify-start'}`}>
-                           Explore Phase <div className="h-[1px] w-8 bg-primary"></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* --- THE CENTRAL CONNECTOR (DOT) --- */}
-                    <div className="absolute left-8 md:left-1/2 -translate-x-1/2 flex items-center justify-center">
-                      {/* Outer Ring */}
-                      <div className="w-8 h-8 rounded-full border border-primary/30 bg-[#FDFCFB] flex items-center justify-center z-10">
-                        {/* Inner Dot */}
-                        <div className="w-3 h-3 bg-primary rounded-full"></div>
-                      </div>
-                      
-                      {/* Pulse Effect */}
-                      <div className="absolute w-12 h-12 bg-primary/10 rounded-full animate-ping opacity-20"></div>
-                    </div>
-
-                    {/* --- THE IMAGE (Smaller & Styled) --- */}
-                    <div className="hidden md:block w-[45%]">
-                      {/* Connector Line from Center to Image */}
-                      <div className={`absolute top-1/2 h-[1px] bg-stone-300 w-[10%] ${isEven ? 'left-[50%]' : 'right-[50%]'}`}></div>
-                      
-                      {/* Image Frame */}
-                      <div className={`relative w-64 h-64 mx-auto rotate-3 transition-transform duration-500 hover:rotate-0 hover:scale-105 ${isEven ? 'mr-auto ml-12' : 'ml-auto mr-12'}`}>
-                        <div className="absolute inset-0 border-2 border-stone-200 rounded-2xl transform translate-x-3 translate-y-3"></div>
-                        <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg bg-white p-1">
-                          <img 
-                            src={item.image} 
-                            alt={item.title} 
-                            className="w-full h-full object-cover rounded-xl"
-                          />
-                        </div>
-                      </div>
-                    </div>
-
-                  </motion.div>
-                );
-              })}
-
-              {/* End Circle */}
-              <div className="absolute left-8 md:left-1/2 bottom-0 w-4 h-4 bg-stone-300 rounded-full -translate-x-1/2 translate-y-1/2"></div>
-            </div>
-            
-          </div>
-        </section>
-
+ 
 
 
 
@@ -606,129 +408,27 @@ const OurSaga = () => {
 
         {/* ================== PHILOSOPHY SECTION ================== */}
 {/* ================== PHILOSOPHY SECTION (REDESIGNED) ================== */}
-        <section className="py-24 bg-[#F9F8F6] text-stone-900">
-          <div className="container mx-auto px-6 max-w-6xl">
-            <div className="grid lg:grid-cols-12 gap-12 items-start">
-              
-              {/* Left Side: Sticky Intro */}
-              <div className="lg:col-span-5 lg:sticky lg:top-32">
-                <span className="text-primary text-xs font-bold tracking-[0.2em] uppercase block mb-6">
-                  Our Approach
-                </span>
-                <h2 className="font-serif text-4xl md:text-5xl mb-8 leading-[1.1] text-stone-900">
-                  We Design for <br />
-                  <span className="italic text-stone-500">Living Well.</span>
-                </h2>
-                <p className="text-stone-600 text-lg font-light leading-relaxed mb-10">
-                  We don't just decorate; we solve problems. We combine cutting-edge design trends with practical execution methods, ensuring beautiful, livable spaces that stand the test of time.
-                </p>
+       
 
-                {/* Stat / Key Points blocks */}
-                <div className="flex flex-col sm:flex-row gap-8 border-t border-stone-200 pt-8">
-                   <div>
-                      <h4 className="text-3xl font-serif mb-1">10+</h4>
-                      <p className="text-xs font-bold uppercase tracking-wider text-stone-500">Years of Expertise</p>
-                   </div>
-                   <div>
-                      <h4 className="text-3xl font-serif mb-1">100%</h4>
-                      <p className="text-xs font-bold uppercase tracking-wider text-stone-500">Transparency</p>
-                   </div>
-                </div>
-              </div>
+               <PremiumApproach />
 
-              {/* Right Side: Philosophy Grid Cards */}
-              <div className="lg:col-span-7 grid sm:grid-cols-2 gap-6">
-                {philosophies.map((phi, idx) => (
-                  <div 
-                    key={idx} 
-                    className="group bg-white p-8 rounded-xl border border-stone-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500"
-                  >
-                    {/* Artistic Number */}
-                    <span className="block text-6xl font-serif text-stone-100 group-hover:text-primary/20 transition-colors mb-4 leading-none">
-                      0{idx + 1}
-                    </span>
-                    
-                    <h3 className="text-xl font-serif mb-3 text-stone-800 group-hover:text-primary transition-colors">
-                      {phi.title}
-                    </h3>
-                    
-                    <p className="text-sm text-stone-500 leading-relaxed font-light">
-                      {phi.desc}
-                    </p>
-                  </div>
-                ))}
-              </div>
+               <PremiumServices/>
 
-            </div>
-          </div>
-        </section>
 
 
 
 
 
         {/* ================== PACKAGES ================== */}
-        <section className="py-24 bg-background">
-          <div className="container mx-auto px-6 max-w-6xl">
-            <div className="text-center mb-16">
-              <span className="text-primary text-xs font-bold tracking-[0.2em] uppercase">Services</span>
-              <h2 className="font-serif text-4xl mt-3">Tailored For You</h2>
-            </div>
 
-            <div className="grid lg:grid-cols-3 gap-8">
-              {packages.map((pkg, idx) => (
-                <div 
-                  key={idx} 
-                  className={`relative p-8 rounded-xl border ${pkg.isPopular ? 'border-primary shadow-xl scale-105 bg-background z-10' : 'border-border bg-secondary/5'} flex flex-col`}
-                >
-                  {pkg.isPopular && (
-                    <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">
-                      Most Popular
-                    </span>
-                  )}
-                  <h3 className="font-serif text-2xl mb-1">{pkg.name}</h3>
-                  <p className="text-sm text-muted-foreground uppercase tracking-wider mb-6">{pkg.tagline}</p>
-                  
-                  <div className="space-y-4 mb-8 flex-1">
-                    {pkg.features.map((feat, fIdx) => (
-                      <div key={fIdx} className="flex items-start gap-3">
-                        <Check className="w-4 h-4 text-primary mt-1 shrink-0" />
-                        <span className="text-sm text-foreground/80">{feat}</span>
-                      </div>
-                    ))}
-                  </div>
 
-                  <button className={`w-full py-3 rounded-md text-sm font-bold uppercase tracking-wider transition-all
-                    ${pkg.isPopular 
-                      ? 'bg-primary text-primary-foreground hover:bg-primary/90' 
-                      : 'bg-secondary text-secondary-foreground hover:bg-secondary/80'}`}
-                  >
-                    View Details
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* ================== WHY CHOOSE US / CTA ================== */}
-        <section className="py-24 bg-secondary/30">
-          <div className="container mx-auto px-6 text-center max-w-3xl">
-            <Shield className="w-12 h-12 mx-auto text-primary mb-6" />
-            <h2 className="font-serif text-3xl md:text-5xl mb-6">Why Choose Studia Saga?</h2>
-            <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
-              We offer <strong>Transparent Pricing</strong> with no hidden costs and <strong>Personalized Service</strong> dedicated to your vision. We are focused on long-term value and lasting client relationships.
-            </p>
-            <div className="flex flex-col md:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-foreground text-background font-medium rounded-md hover:opacity-90 transition-opacity">
-                Book Free Consultation
-              </button>
-              <button className="px-8 py-4 bg-transparent border border-foreground text-foreground font-medium rounded-md hover:bg-foreground/5 transition-colors">
-                View Our Portfolio
-              </button>
-            </div>
-          </div>
-        </section>
+        <WhyChooseUs/>
+
+
+
+
+
 
         {/* Keep existing component if you wish, or remove if the data above replaces it */}
         {/* <About3 /> */}
