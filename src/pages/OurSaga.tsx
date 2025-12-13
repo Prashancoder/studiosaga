@@ -153,24 +153,29 @@ const OurSaga = () => {
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/50"></div>
 
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-          <motion.h1 
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="text-white font-serif text-5xl md:text-7xl lg:text-8xl mb-4"
-          >
-            Our Saga
-          </motion.h1>
-          <motion.p 
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-white/90 text-sm md:text-xl font-light tracking-[0.2em] uppercase"
-          >
-            Smart Interiors, Smart Prices
-          </motion.p>
-        </div>
+{/* Overlay */}
+<div className="absolute inset-0 bg-black/40"></div>
+
+<div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+  <motion.h1 
+    initial={{ y: 20, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    transition={{ duration: 0.8 }}
+    // UPDATE: Sizes reduced to (3xl, 5xl, 6xl) for a cleaner, smaller look
+    className="text-white text-3xl md:text-5xl lg:text-6xl mb-6 font-extralight tracking-[0.2em] uppercase"
+  >
+    Our Saga
+  </motion.h1>
+  
+  <motion.p 
+    initial={{ y: 20, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    transition={{ duration: 0.8, delay: 0.2 }}
+    className="text-white/90 text-xs md:text-base font-light tracking-[0.3em] uppercase"
+  >
+    Smart Interiors, Smart Prices
+  </motion.p>
+</div>
       </div>
 
       <main>
