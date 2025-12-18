@@ -1,16 +1,26 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Instagram, Linkedin, Facebook } from "lucide-react";
 
+// Import the logo (Adjusting path based on typical src/components structure)
+import logo from "../assets/footer/logo.png"; 
+
 const Footer = () => {
   return (
     <footer className="bg-luxury-beige py-16">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div>
-            <h3 className="text-2xl font-extralight tracking-wider mb-6">StudiaSaga</h3>
-            <p className="text-sm font-light text-muted-foreground leading-relaxed">
-              Crafting luxury interior spaces with thoughtful design and attention to detail.
-            </p>
+            {/* Logo replacement starts here */}
+            <div className="mb-6">
+              <Link to="/">
+                <img 
+                  src={logo} 
+                  alt="StudiaSaga Logo" 
+                  className="h-34 w-auto object-contain"                />
+              </Link>
+            </div>
+            {/* Logo replacement ends here */}
+            
           </div>
 
           <div>

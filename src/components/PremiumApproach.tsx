@@ -59,7 +59,7 @@ const PremiumApproach = () => {
               </h2>
 
               <p className="text-stone-600 text-lg font-light leading-relaxed mb-12 max-w-md">
-                We don't just decorate; we architecture feelings. Combining cutting-edge trends with practical execution to build livable masterpieces.
+                 feelings. Combining cutting-edge trends with practical execution to build livable masterpieces.
               </p>
 
               {/* Enhanced Stats */}
