@@ -7,6 +7,7 @@ import StudiasagaDisplay from "@/components/StudiasagaDisplay";
 import MediaSection from '@/components/MediaSection';
 // import InstagramPost from "@/components/InstagramPost;
 import ClientSection from "@/components/clients";
+import WhyChooseUs from "@/components/WhyChooseUs";
 import ChalkTVSection from '@/components/ChalkTVSection'; 
 
 
@@ -51,7 +52,9 @@ const Index = () => {
           </div>
         </section>
         
-        <MediaSection />
+        
+        {/* <MediaSection /> */}
+        <WhyChooseUs/>
         <ClientSection />
         <ChalkTVSection />
 
