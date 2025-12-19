@@ -438,7 +438,7 @@ const OurSaga = () => {
         {/* Keep existing component if you wish, or remove if the data above replaces it */}
         {/* <About3 /> */}
         
-        <BlogsCarousel />
+        {/* <BlogsCarousel /> */}
       </main>
 
       <Footer />

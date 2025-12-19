@@ -63,16 +63,18 @@ const PremiumApproach = () => {
               </p>
 
               {/* Enhanced Stats */}
-              <div className="flex gap-12 border-t border-stone-200 pt-8">
-                <div>
-                  <h4 className="text-4xl font-serif text-stone-800">10+</h4>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-stone-400 mt-2">Years</p>
-                </div>
-                <div>
-                  <h4 className="text-4xl font-serif text-stone-800">100%</h4>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-stone-400 mt-2">Satisfaction</p>
-                </div>
-              </div>
+{/* Updated Stats for a New Company */}
+<div className="flex gap-12 border-t border-stone-200 pt-8">
+  <div>
+    {/* Focus on "Modern" or "Bespoke" instead of years */}
+    <h4 className="text-3xl font-serif text-stone-800 uppercase tracking-tighter">Bespoke</h4>
+    <p className="text-xs font-semibold uppercase tracking-wider text-stone-400 mt-2">Design Philosophy</p>
+  </div>
+  <div>
+    <h4 className="text-4xl font-serif text-stone-800">100%</h4>
+    <p className="text-xs font-semibold uppercase tracking-wider text-stone-400 mt-2">Dedication</p>
+  </div>
+</div>
 
               {/* CTA Button */}
               <motion.button 

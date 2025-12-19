@@ -8,8 +8,6 @@ import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-
-
 export default function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -24,7 +22,6 @@ export default function Contact() {
     const formData = new FormData(form);
 
     try {
-      // API Hit to your specific Formspree link
       const response = await fetch("https://formspree.io/f/xyzrpyza", {
         method: "POST",
         body: formData,
@@ -55,24 +52,16 @@ export default function Contact() {
 
   return (
     <main className="min-h-screen bg-background text-foreground">
+      <Header />
 
-                    <Header />
-      
-      
       {/* --- 1. LUXURY BANNER SECTION --- */}
       <section className="relative w-full h-[50vh] min-h-[400px] lg:h-[80vh] overflow-hidden">
-        
-        {/* SIMPLE HTML IMG TAG (No Config Needed) */}
-        <img 
+        <img
           src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=2000&auto=format&fit=crop"
           alt="Luxury Interior"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        
-        {/* Dark sdsdsdsd Overlay */}
         <div className="absolute inset-0 bg-black/40" />
-
-        {/* Banner Content */}
         <div className="relative z-10 container mx-auto px-6 h-full flex flex-col justify-center items-center text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -94,7 +83,6 @@ export default function Contact() {
       <section className="py-24 lg:py-32">
         <div className="container mx-auto px-6">
           <div ref={ref} className="grid lg:grid-cols-12 gap-12 lg:gap-20">
-            
             {/* Left Side: Contact Info */}
             <motion.div
               className="lg:col-span-5 flex flex-col justify-center"
@@ -106,18 +94,17 @@ export default function Contact() {
                 <span className="w-8 h-[1px] bg-primary"></span>
                 Get In Touch
               </span>
-              
+
               <h2 className="font-serif text-4xl md:text-5xl text-foreground leading-tight mb-8">
                 Let’s Craft Your <br />
                 <span className="italic text-muted-foreground">Dream Space</span>
               </h2>
-              
+
               <p className="text-muted-foreground text-lg leading-relaxed font-light mb-12">
                 Whether you are looking to renovate your home or design a new office, our team is ready to bring your vision to life with elegance.
               </p>
 
               <div className="space-y-8">
-                {/* Phone */}
                 <div className="flex items-start gap-6 group">
                   <div className="w-10 h-10 border border-border rounded-full flex items-center justify-center group-hover:border-primary transition-colors duration-300">
                     <Phone className="w-4 h-4 text-foreground group-hover:text-primary transition-colors" />
@@ -128,7 +115,6 @@ export default function Contact() {
                   </div>
                 </div>
 
-                {/* Email */}
                 <div className="flex items-start gap-6 group">
                   <div className="w-10 h-10 border border-border rounded-full flex items-center justify-center group-hover:border-primary transition-colors duration-300">
                     <Mail className="w-4 h-4 text-foreground group-hover:text-primary transition-colors" />
@@ -139,7 +125,6 @@ export default function Contact() {
                   </div>
                 </div>
 
-                {/* Location */}
                 <div className="flex items-start gap-6 group">
                   <div className="w-10 h-10 border border-border rounded-full flex items-center justify-center group-hover:border-primary transition-colors duration-300">
                     <MapPin className="w-4 h-4 text-foreground group-hover:text-primary transition-colors" />
@@ -191,7 +176,7 @@ export default function Contact() {
                 </div>
 
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-                   <div className="flex items-center gap-2 text-muted-foreground/70">
+                  <div className="flex items-center gap-2 text-muted-foreground/70">
                     <Shield className="w-4 h-4" />
                     <span className="text-xs uppercase tracking-wide">Privacy Guaranteed</span>
                   </div>
@@ -212,6 +197,22 @@ export default function Contact() {
           </div>
         </div>
       </section>
+
+      {/* --- 3. GOOGLE MAPS SECTION --- */}
+      <section className="w-full h-[500px]  transition-all duration-700 ease-in-out border-t border-border/30">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10835.491907685486!2d76.9934030319635!3d28.440750623889517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d19d55b1d4b8d%3A0xf79816a4f0c34423!2sCasa%20Exotique%20-%20Best%20Home%20Interior%20Designer%20in%20Gurugram!5e1!3m2!1sen!2sin!4v1766138152681!5m2!1sen!2sin"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen={true}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Studiasaga Studio Location"
+        ></iframe>
+      </section>
+
+      <Footer />
     </main>
   );
 }
