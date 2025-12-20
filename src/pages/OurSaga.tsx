@@ -11,7 +11,7 @@ import BlogsCarousel from "@/components/BlogsCarousel";
 import { motion } from "framer-motion";
 import { Check, Star, Heart, Zap, Shield, Layout, Palette, Lamp, Sofa, PenTool } from "lucide-react";
 
-const videoSources = ["/images/1.mp4", "/images/2.mp4"];
+const videoSources = ["/images/2.mp4"];
 
 // --- DATA FROM YOUR PDF ---
 const philosophies = [

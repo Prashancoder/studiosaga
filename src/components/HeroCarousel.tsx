@@ -1,6 +1,6 @@
   import { useState, useEffect } from "react";
   import { ChevronLeft, ChevronRight } from "lucide-react";
-  import hero1 from "@/assets/hero-1.jpg";
+  import hero1 from "@/assets/200.jpeg";
   import hero2 from "@/assets/hero-2.jpg";
   import hero3 from "@/assets/hero-3.jpg";
 
