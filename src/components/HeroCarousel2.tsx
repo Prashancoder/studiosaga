@@ -68,9 +68,9 @@ const HeroCarousel2 = () => {
           </div>
 
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-white text-center animate-fade-in">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extralight tracking-[0.2em] uppercase">
-              {slide.title}
-            </h1>
+          <h1 className="text-xl sm:text-2xl md:text-6xl lg:text-6xl font-extralight tracking-[0.2em] uppercase leading-tight">
+  {slide.title}
+</h1>
           </div>
 
           <div className="absolute bottom-24 right-6 md:right-12 z-20 text-white animate-fade-in">

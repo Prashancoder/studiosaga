@@ -1,21 +1,25 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+
+// Desktop Images
 import hero1 from "@/assets/200.jpeg";
 import hero3 from "@/assets/hero-3.jpg";
-// Importing the mobile-specific image
-import mobileHero1 from "@/assets/saga/qq.png"; 
+
+// Mobile Images (Updated with your new paths)
+import mobileHero1 from "@/assets/mobile/55.jpg"; 
+import mobileHero2 from "@/assets/mobile/66.jpg"; 
 
 const slides = [
   {
     desktopImage: hero1,
-    mobileImage: mobileHero1, // New mobile-specific path
+    mobileImage: mobileHero1, // Using 55.jpg
     location: "GURUGRAM",
     title: "Studia Saga HOME",
     category: "RESIDENTIAL",
   },
   {
     desktopImage: hero3,
-    mobileImage: hero3, // If you don't have a specific mobile one for this, use same
+    mobileImage: mobileHero2, // Using 66.jpg
     location: "GURGAON",
     title: "MINIMALIST RETREAT",
     category: "RESIDENTIAL",
@@ -52,14 +56,14 @@ const HeroCarousel = () => {
         >
           <div className="absolute inset-0 bg-black/20 z-10" />
           
-          {/* --- MOBILE IMAGE (Visible only on small screens) --- */}
+          {/* --- MOBILE IMAGE --- */}
           <img
             src={slide.mobileImage}
             alt={slide.title}
             className="block md:hidden w-full h-full object-cover"
           />
 
-          {/* --- DESKTOP IMAGE (Visible only on medium screens and up) --- */}
+          {/* --- DESKTOP IMAGE --- */}
           <img
             src={slide.desktopImage}
             alt={slide.title}
@@ -74,11 +78,9 @@ const HeroCarousel = () => {
           </div>
 
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 text-white text-center animate-fade-in px-4">
-          <h1 className="text-xl sm:text-2xl md:text-6xl lg:text-6xl font-extralight tracking-[0.2em] uppercase leading-tight">
-  {slide.title}
-</h1>
-
-
+            <h1 className="text-xl sm:text-2xl md:text-6xl lg:text-6xl font-extralight tracking-[0.2em] uppercase leading-tight">
+              {slide.title}
+            </h1>
           </div>
 
           <div className="absolute bottom-24 right-6 md:right-12 z-20 text-white animate-fade-in">
@@ -89,7 +91,7 @@ const HeroCarousel = () => {
         </div>
       ))}
 
-      {/* Navigation Arrows (Hidden on very small screens for cleaner UI, or keep them) */}
+      {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
         className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 md:w-12 md:h-12 rounded-full border border-white/50 flex items-center justify-center text-white hover:bg-white/10 transition-colors"

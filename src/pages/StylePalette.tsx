@@ -104,34 +104,34 @@ const stylesData = [
       "Statement lighting fixtures"
     ]
   },
-  {
-    id: 8,
-    title: "Japandi",
-    image: "/src/assets/ourr/10.jpg", // Update with your actual image path
-    tagline: "East Meets West",
-    philosophy: "The perfect blend of Japanese artistic aesthetic and Scandinavian functionality. It focuses on the 'Wabi-sabi' principle of finding beauty in imperfection and the warmth of a cozy home.",
-    elements: [
-      "Low-profile furniture",
-      "Contrast of light woods and black metal",
-      "Handcrafted ceramics and decor",
-      "Uncluttered, intentional layouts",
-      "Soft, neutral color palettes with bamboo accents"
-    ]
-  },
-  {
-    id: 9,
-    title: "Art Deco Revival",
-    image: "/src/assets/ourr/12.jpg", // Update with your actual image path
-    tagline: "Glamour, Geometry & Opulence",
-    philosophy: "A modern take on the roaring 20s. This style is characterized by bold geometric patterns, rich colors, and lavish ornamentation, creating a space that feels like a high-end boutique hotel.",
-    elements: [
-      "Bold geometric shapes and patterns",
-      "High-shine finishes (Chrome, Glass, Lacquer)",
-      "Symmetry and repetitive motifs",
-      "Jewel-toned accents (Emerald, Sapphire, Gold)",
-      "Statement-making, tiered lighting"
-    ]
-  }
+  // {
+  //   id: 8,
+  //   title: "Japandi",
+  //   image: "/src/assets/ourr/10.jpg", // Update with your actual image path
+  //   tagline: "East Meets West",
+  //   philosophy: "The perfect blend of Japanese artistic aesthetic and Scandinavian functionality. It focuses on the 'Wabi-sabi' principle of finding beauty in imperfection and the warmth of a cozy home.",
+  //   elements: [
+  //     "Low-profile furniture",
+  //     "Contrast of light woods and black metal",
+  //     "Handcrafted ceramics and decor",
+  //     "Uncluttered, intentional layouts",
+  //     "Soft, neutral color palettes with bamboo accents"
+  //   ]
+  // },
+  // {
+  //   id: 9,
+  //   title: "Art Deco Revival",
+  //   image: "/src/assets/ourr/12.jpg", // Update with your actual image path
+  //   tagline: "Glamour, Geometry & Opulence",
+  //   philosophy: "A modern take on the roaring 20s. This style is characterized by bold geometric patterns, rich colors, and lavish ornamentation, creating a space that feels like a high-end boutique hotel.",
+  //   elements: [
+  //     "Bold geometric shapes and patterns",
+  //     "High-shine finishes (Chrome, Glass, Lacquer)",
+  //     "Symmetry and repetitive motifs",
+  //     "Jewel-toned accents (Emerald, Sapphire, Gold)",
+  //     "Statement-making, tiered lighting"
+  //   ]
+  // }
 ];
 
 const StylePalette = () => {
