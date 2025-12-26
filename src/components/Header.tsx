@@ -78,64 +78,67 @@ const Header = () => {
             </NavigationMenuList>
           </NavigationMenu>
 
-          {/* Button + Mobile Toggle */}
           <div className="flex items-center gap-4">
-            <Button
-              variant="outline"
-              className={`
-                hidden md:inline-flex font-light tracking-wide uppercase text-xs px-6 py-5
-                bg-[#E9E7DE] text-black border-[#E9E7DE]
-                hover:bg-white hover:text-black hover:border-white transition-all duration-300
-              `}
-            >
-              Get In Touch
-            </Button>
+  {/* --- DESKTOP REDIRECT TO CONTACT --- */}
+  <Link to="/Contact" className="hidden md:inline-flex">
+    <Button
+      variant="outline"
+      className={`
+        font-light tracking-wide uppercase text-xs px-6 py-5
+        bg-[#E9E7DE] text-black border-[#E9E7DE]
+        hover:bg-white hover:text-black hover:border-white transition-all duration-300
+      `}
+    >
+      Get In Touch
+    </Button>
+  </Link>
 
-            {/* Mobile Menu */}
-            <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
-              <SheetTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className={`md:hidden ${textColor}`}
-                >
-                  <Menu className="h-6 w-6" />
-                </Button>
-              </SheetTrigger>
+  {/* Mobile Menu */}
+  <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
+    <SheetTrigger asChild>
+      <Button
+        variant="ghost"
+        size="icon"
+        className={`md:hidden ${textColor}`}
+      >
+        <Menu className="h-6 w-6" />
+      </Button>
+    </SheetTrigger>
 
-              <SheetContent side="left" className="w-[300px] p-0 border-r border-stone-100">
-                <div className="flex flex-col h-full bg-[#F9F8F6]">
-                  {/* Mobile Logo inside Sidebar */}
-                  <div className="p-8 border-b border-stone-200">
-                    <Link
-                      to="/"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      <img src={logo} alt="StudiaSaga" className="h-10 w-auto" />
-                    </Link>
-                  </div>
+    <SheetContent side="left" className="w-[300px] p-0 border-r border-stone-100">
+      <div className="flex flex-col h-full bg-[#F9F8F6]">
+        {/* Mobile Logo inside Sidebar */}
+        <div className="p-8 border-b border-stone-200">
+          <Link
+            to="/"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <img src={logo} alt="StudiaSaga" className="h-10 w-auto" />
+          </Link>
+        </div>
 
-                  <nav className="flex-1 overflow-y-auto p-8">
-                    <div className="flex flex-col gap-6">
-                      <Link to="/" className="text-lg font-serif text-stone-900" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-                      <Link to="/our-saga" className="text-lg font-serif text-stone-900" onClick={() => setMobileMenuOpen(false)}>Our Saga</Link>
-                      <Link to="/style-palette" className="text-lg font-serif text-stone-900" onClick={() => setMobileMenuOpen(false)}>Style Palette</Link>
-                      <Link to="/services" className="text-lg font-serif text-stone-900" onClick={() => setMobileMenuOpen(false)}>Services</Link>
-                      <Link to="/Contact" className="text-lg font-serif text-stone-900" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
-                    </div>
-                  </nav>
-
-                  <div className="p-8 border-t border-stone-200">
-                    <Button className="w-full font-bold uppercase tracking-widest py-6 bg-stone-900 text-white">
-                      Start Project
-                    </Button>
-                  </div>
-                </div>
-              </SheetContent>
-            </Sheet>
+        <nav className="flex-1 overflow-y-auto p-8">
+          <div className="flex flex-col gap-6">
+            <Link to="/" className="text-lg font-serif text-stone-900" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+            <Link to="/our-saga" className="text-lg font-serif text-stone-900" onClick={() => setMobileMenuOpen(false)}>Our Saga</Link>
+            <Link to="/style-palette" className="text-lg font-serif text-stone-900" onClick={() => setMobileMenuOpen(false)}>Style Palette</Link>
+            <Link to="/services" className="text-lg font-serif text-stone-900" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+            <Link to="/Contact" className="text-lg font-serif text-stone-900" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
           </div>
+        </nav>
 
-
+        {/* --- MOBILE REDIRECT TO CONTACT --- */}
+        <div className="p-8 border-t border-stone-200">
+          <Link to="/Contact" onClick={() => setMobileMenuOpen(false)}>
+            <Button className="w-full font-bold uppercase tracking-widest py-6 bg-stone-900 text-white">
+              Contact Us
+            </Button>
+          </Link>
+        </div>
+      </div>
+    </SheetContent>
+  </Sheet>
+</div>
           
         </div>
       </div>
