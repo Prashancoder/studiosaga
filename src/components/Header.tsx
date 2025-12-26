@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu } from "lucide-react";
 
+// --- IMPORT YOUR LOGO HERE ---
+import logo from "@/assets/logo.png"; 
+
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -45,53 +48,33 @@ const Header = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between">
 
-          {/* --- LOGO IMAGE SECTION --- */}
+          {/* --- LOGO SECTION --- */}
           <Link to="/" className="flex items-center gap-2 group">
-            {/* LOGIC:
-                - Scroll kiya (White Background) -> Black Logo dikhao
-                - Top par hai (Dark Background) -> White Logo dikhao
-            */}
             <img 
-              src={isScrolled ? "/logo-black.png" : "/logo-white.png"} 
+              src={logo} 
               alt="StudiaSaga" 
-              className="h-16 w-auto object-contain transition-all duration-300"
+              className="h-12 md:h-16 w-auto object-contain transition-all duration-300"
             />
           </Link>
 
           {/* Desktop Navigation */}
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList className="gap-8">
-
               <NavigationMenuItem>
-                <Link to="/" className={navLinkClass}>
-                  Home
-                </Link>
+                <Link to="/" className={navLinkClass}>Home</Link>
               </NavigationMenuItem>
-
               <NavigationMenuItem>
-                <Link to="/our-saga" className={navLinkClass}>
-                  Our Saga
-                </Link>
+                <Link to="/our-saga" className={navLinkClass}>Our Saga</Link>
               </NavigationMenuItem>
-
               <NavigationMenuItem>
-                <Link to="/style-palette" className={navLinkClass}>
-                  Style Palette
-                </Link>
+                <Link to="/style-palette" className={navLinkClass}>Style Palette</Link>
               </NavigationMenuItem>
-
               <NavigationMenuItem>
-                <Link to="/services" className={navLinkClass}>
-                  Services
-                </Link>
+                <Link to="/services" className={navLinkClass}>Services</Link>
               </NavigationMenuItem>
-
               <NavigationMenuItem>
-                <Link to="/Contact" className={navLinkClass}>
-                  Contact
-                </Link>
+                <Link to="/Contact" className={navLinkClass}>Contact</Link>
               </NavigationMenuItem>
-
             </NavigationMenuList>
           </NavigationMenu>
 
@@ -121,53 +104,36 @@ const Header = () => {
               </SheetTrigger>
 
               <SheetContent side="left" className="w-[300px] p-0 border-r border-stone-100">
-
                 <div className="flex flex-col h-full bg-[#F9F8F6]">
-                  {/* Mobile Logo */}
+                  {/* Mobile Logo inside Sidebar */}
                   <div className="p-8 border-b border-stone-200">
                     <Link
                       to="/"
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      {/* Mobile menu hamesha light color ka hai, isliye yahan sirf BLACK logo aayega */}
-                      <img src="/logo-black.png" alt="StudiaSaga" className="h-8 w-auto" />
+                      <img src={logo} alt="StudiaSaga" className="h-10 w-auto" />
                     </Link>
                   </div>
 
                   <nav className="flex-1 overflow-y-auto p-8">
                     <div className="flex flex-col gap-6">
-
-                      <Link to="/" className="text-lg font-serif text-stone-900" onClick={() => setMobileMenuOpen(false)}>
-                        Home
-                      </Link>
-                      <Link to="/our-saga" className="text-lg font-serif text-stone-900" onClick={() => setMobileMenuOpen(false)}>
-                        Our Saga
-                      </Link>
-                      <Link to="/style-palette" className="text-lg font-serif text-stone-900" onClick={() => setMobileMenuOpen(false)}>
-                        Style Palette
-                      </Link>
-                      <Link to="/services" className="text-lg font-serif text-stone-900" onClick={() => setMobileMenuOpen(false)}>
-                        Services
-                      </Link>
-                      <Link to="/Contact" className="text-lg font-serif text-stone-900" onClick={() => setMobileMenuOpen(false)}>
-                        Contact
-                      </Link>
-
+                      <Link to="/" className="text-lg font-serif text-stone-900" onClick={() => setMobileMenuOpen(false)}>Home</Link>
+                      <Link to="/our-saga" className="text-lg font-serif text-stone-900" onClick={() => setMobileMenuOpen(false)}>Our Saga</Link>
+                      <Link to="/style-palette" className="text-lg font-serif text-stone-900" onClick={() => setMobileMenuOpen(false)}>Style Palette</Link>
+                      <Link to="/services" className="text-lg font-serif text-stone-900" onClick={() => setMobileMenuOpen(false)}>Services</Link>
+                      <Link to="/Contact" className="text-lg font-serif text-stone-900" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
                     </div>
                   </nav>
 
-                  {/* Mobile Footer Button */}
                   <div className="p-8 border-t border-stone-200">
                     <Button className="w-full font-bold uppercase tracking-widest py-6 bg-stone-900 text-white">
                       Start Project
                     </Button>
                   </div>
                 </div>
-
               </SheetContent>
             </Sheet>
           </div>
-
         </div>
       </div>
     </header>

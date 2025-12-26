@@ -32,14 +32,14 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/style-palette/minimalist" className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors">
+                <Link to="/style-palette" className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors">
                   Style Palette
                 </Link>
               </li>
               <li>
-                <Link to="/interior-kit/base/1bhk" className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors">
+                {/* <Link to="/interior-kit/base/1bhk" className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors">
                   Interior Kit
-                </Link>
+                </Link> */}
               </li>
               <li>
                 <a href="#" className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors">

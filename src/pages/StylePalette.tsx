@@ -76,20 +76,20 @@ const stylesData = [
       "Ambient lighting"
     ]
   },
-  {
-    id: 6,
-    title: "Nature-Modern (Biophilic)",
-    image: "/images/ourr/6.jpeg", // Updated path (Note: extension is .jpeg as per your code)
-    tagline: "Bringing the Outdoors In",
-    philosophy: "Design that connects the occupant to the natural environment to improve well-being.",
-    elements: [
-      "Living walls and indoor plants",
-      "Natural stone and wood",
-      "Large windows",
-      "Organic shapes",
-      "Natural ventilation"
-    ]
-  },
+  // {
+  //   id: 6,
+  //   title: "Nature-Modern (Biophilic)",
+  //   image: "/images/ourr/6.jpeg", // Updated path (Note: extension is .jpeg as per your code)
+  //   tagline: "Bringing the Outdoors In",
+  //   philosophy: "Design that connects the occupant to the natural environment to improve well-being.",
+  //   elements: [
+  //     "Living walls and indoor plants",
+  //     "Natural stone and wood",
+  //     "Large windows",
+  //     "Organic shapes",
+  //     "Natural ventilation"
+  //   ]
+  // },
   {
     id: 7,
     title: "Mid-Century Modern",
