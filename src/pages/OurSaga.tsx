@@ -190,7 +190,7 @@ const OurSaga = () => {
                 </h2>
                 <div className="space-y-4 text-muted-foreground text-lg font-light leading-relaxed">
                   <p>
-                    Studia Saga was founded with a singular passion: to transform ordinary spaces into personalized sanctuaries that don't require overspending. We saw too many people compromise on their dream interiors due to budget constraints, and we knew there had to be a better way.
+                    Anam Cara was founded with a singular passion: to transform ordinary spaces into personalized sanctuaries that don't require overspending. We saw too many people compromise on their dream interiors due to budget constraints, and we knew there had to be a better way.
                   </p>
                   <p>
                     We believe that great design should be accessible to everyone. By blending creativity, functionality, and affordability, we prove that exceptional interiors are within reach for all budgets.

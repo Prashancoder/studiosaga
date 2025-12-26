@@ -8,7 +8,7 @@ const slides = [
   {
     image: hero1,
     location: "GURUGRAM",
-    title: "Studia Saga HOME",
+    title: "Anam Cara HOME",
     category: "RESIDENTIAL",
   },
   {

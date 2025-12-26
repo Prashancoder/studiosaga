@@ -8,8 +8,8 @@ import HeroCarousel2 from "@/components/HeroCarousel2";
 const stylesData = [
   {
     id: 1,
-    title: "Scandinavian Minimalism",
-    image: "/images/ourr/8.jpg", // Updated path
+    title: "Scandinavian",
+    image: "/images/ourr/8.jpg",
     tagline: "Serenity in Simplicity",
     philosophy: "Rooted in the Nordic regions, this style emphasizes clean lines, utility, and simple furnishings that are functional, beautiful, and cozy.",
     elements: [
@@ -22,8 +22,8 @@ const stylesData = [
   },
   {
     id: 2,
-    title: "Bohemian Chic",
-    image: "/images/ourr/11.jpg", // Updated path
+    title: "Bohemian (Boho Chic)",
+    image: "/images/ourr/11.jpg",
     tagline: "Curated Chaos & Artistic Freedom",
     philosophy: "Boho chic implies a lifestyle that is unconventional and artistic. It is a 'more is more' approach that layers colors, patterns, and textures.",
     elements: [
@@ -36,8 +36,8 @@ const stylesData = [
   },
   {
     id: 3,
-    title: "Urban Industrial",
-    image: "/images/ourr/2.jpg", // Updated path
+    title: "Industrial",
+    image: "/images/ourr/2.jpg",
     tagline: "Raw, Refined & Edgy",
     philosophy: "Inspired by the lofty look of warehouses and factories, this style celebrates raw materials like exposed brick and metal.",
     elements: [
@@ -50,8 +50,8 @@ const stylesData = [
   },
   {
     id: 4,
-    title: "Warm Contemporary",
-    image: "/images/ourr/10.jpg", // Updated path
+    title: "Contemporary",
+    image: "/images/ourr/10.jpg",
     tagline: "Soft Textures & Inviting Lines",
     philosophy: "Balances the sleekness of modern style with the comfort of traditional homes through curved silhouettes.",
     elements: [
@@ -64,8 +64,8 @@ const stylesData = [
   },
   {
     id: 5,
-    title: "Modern Minimal Luxe",
-    image: "/images/ourr/4.jpg", // Updated path
+    title: "Modern Minimalist",
+    image: "/images/ourr/4.jpg",
     tagline: "Understated Elegance",
     philosophy: "Uses high-end materials and monochromatic palettes to create luxury without clutter.",
     elements: [
@@ -76,10 +76,24 @@ const stylesData = [
       "Ambient lighting"
     ]
   },
+  {
+    id: 6,
+    title: "Artistic Boutique",
+    image: "/images/ourr/5.jpg", // Suggested placeholder, update if name is different
+    tagline: "Curated Luxury & Bold Expression",
+    philosophy: "A fusion of gallery-style sophistication and high-fashion interiors. This style treats every piece of furniture as a work of art, blending bold colors with bespoke craftsmanship.",
+    elements: [
+      "Custom-made furniture and unique sculptures",
+      "Bold, dramatic color palettes (Emerald, Gold, Navy)",
+      "High-contrast textures like velvet and polished stone",
+      "Symmetry and high-end wallpaper",
+      "Theatrical lighting fixtures"
+    ]
+  },
   // {
-  //   id: 6,
+  //   id: 7,
   //   title: "Nature-Modern (Biophilic)",
-  //   image: "/images/ourr/6.jpeg", // Updated path (Note: extension is .jpeg as per your code)
+  //   image: "/images/our/6.jpeg", 
   //   tagline: "Bringing the Outdoors In",
   //   philosophy: "Design that connects the occupant to the natural environment to improve well-being.",
   //   elements: [
@@ -91,9 +105,9 @@ const stylesData = [
   //   ]
   // },
   {
-    id: 7,
+    id: 8,
     title: "Mid-Century Modern",
-    image: "/images/ourr/1.jpg", // Updated path
+    image: "/images/ourr/1.jpg",
     tagline: "Retro Nostalgia meets Function",
     philosophy: "Form follows function, featuring organic curves and geometric lines from the 50s and 60s.",
     elements: [

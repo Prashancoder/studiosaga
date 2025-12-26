@@ -54,7 +54,7 @@ const WhyChooseUs = () => {
               The Standard
             </span>
             <h2 className="font-serif text-4xl md:text-5xl text-stone-900">
-              Why Choose <span className="italic font-light text-stone-500">Studia Saga?</span>
+              Why Choose <span className="italic font-light text-stone-500">Anam Cara?</span>
             </h2>
           </motion.div>
         </div>
