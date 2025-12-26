@@ -9,9 +9,9 @@ const stylesData = [
   {
     id: 1,
     title: "Scandinavian Minimalism",
-    image: "/src/assets/ourr/8.jpg",
+    image: "/images/ourr/8.jpg", // Updated path
     tagline: "Serenity in Simplicity",
-    philosophy: "Rooted in the Nordic regions, this style emphasizes clean lines, utility, and simple furnishings that are functional, beautiful, and cozy. It blends textures and soft hues to make modern decor feel warm and inviting.",
+    philosophy: "Rooted in the Nordic regions, this style emphasizes clean lines, utility, and simple furnishings that are functional, beautiful, and cozy.",
     elements: [
       "Light, muted colors (whites, creams, pale grays)",
       "Heavy use of natural wood accents",
@@ -23,115 +23,87 @@ const stylesData = [
   {
     id: 2,
     title: "Bohemian Chic",
-    image: "/src/assets/ourr/11.jpg",
+    image: "/images/ourr/11.jpg", // Updated path
     tagline: "Curated Chaos & Artistic Freedom",
-    philosophy: "Boho chic implies a lifestyle that is unconventional and artistic. It is a 'more is more' approach that layers colors, patterns, and textures. It tells a story of travel, art, and a relaxed spirit.",
+    philosophy: "Boho chic implies a lifestyle that is unconventional and artistic. It is a 'more is more' approach that layers colors, patterns, and textures.",
     elements: [
       "Mix of vintage and modern furniture",
-      "Global-inspired textiles (rugs, throws, pillows)",
+      "Global-inspired textiles",
       "Abundance of indoor plants",
-      "Warm, earthy tones mixed with jewel colors",
-      "Low-level seating and comfortable vibes"
+      "Warm, earthy tones",
+      "Low-level seating"
     ]
   },
   {
     id: 3,
     title: "Urban Industrial",
-    image: "/src/assets/ourr/2.jpg",
+    image: "/images/ourr/2.jpg", // Updated path
     tagline: "Raw, Refined & Edgy",
-    philosophy: "Inspired by the lofty look of warehouses and factories, this style celebrates raw materials. It's about displaying the building materials that many try to conceal, creating a look that is unfinished yet sophisticated.",
+    philosophy: "Inspired by the lofty look of warehouses and factories, this style celebrates raw materials like exposed brick and metal.",
     elements: [
       "Exposed brick, beams, and ductwork",
       "Concrete floors and metal finishes",
-      "Vintage industrial lighting (Edison bulbs)",
-      "Neutral color palette (grays, blacks, browns)",
-      "Open floor plans with high ceilings"
+      "Vintage industrial lighting",
+      "Neutral color palette",
+      "Open floor plans"
     ]
   },
   {
     id: 4,
     title: "Warm Contemporary",
-    image: "/src/assets/ourr/10.jpg", // Update with your actual image path
+    image: "/images/ourr/10.jpg", // Updated path
     tagline: "Soft Textures & Inviting Lines",
-    philosophy: "Warm contemporary design balances the sleekness of modern style with the comfort of traditional homes. It focuses on approachable luxury through curved silhouettes and a palette of woods and stones.",
+    philosophy: "Balances the sleekness of modern style with the comfort of traditional homes through curved silhouettes.",
     elements: [
       "Curved furniture silhouettes",
-      "Warm wood veneers (Oak, Walnut)",
-      "Mixed metal accents in matte finishes",
-      "Layered lighting for a soft glow",
-      "Plush fabrics like bouclé and velvet"
+      "Warm wood veneers",
+      "Mixed metal accents",
+      "Layered lighting",
+      "Plush fabrics"
     ]
   },
   {
     id: 5,
     title: "Modern Minimal Luxe",
-    image: "/src/assets/ourr/4.jpg",
+    image: "/images/ourr/4.jpg", // Updated path
     tagline: "Understated Elegance",
-    philosophy: "A step above standard minimalism. It uses high-end materials and monochromatic palettes to create a sense of luxury without the clutter. Every piece is sculptural and intentional.",
+    philosophy: "Uses high-end materials and monochromatic palettes to create luxury without clutter.",
     elements: [
-      "High-quality materials (Marble, Brass, Velvet)",
+      "High-quality materials (Marble, Brass)",
       "Monochromatic color scheme",
-      "Sharp, clean architectural lines",
+      "Sharp architectural lines",
       "Statement art pieces",
-      "Sophisticated and ambient lighting"
+      "Ambient lighting"
     ]
   },
   {
     id: 6,
     title: "Nature-Modern (Biophilic)",
-    image: "/src/assets/our/6.jpeg",
+    image: "/images/ourr/6.jpeg", // Updated path (Note: extension is .jpeg as per your code)
     tagline: "Bringing the Outdoors In",
-    philosophy: "Design that connects the occupant to the natural environment. It uses direct nature, indirect nature, and space and place conditions to reduce stress and improve well-being.",
+    philosophy: "Design that connects the occupant to the natural environment to improve well-being.",
     elements: [
-      "Living walls and large indoor plants",
-      "Natural stone and untreated wood",
-      "Large windows for view and light",
-      "Organic shapes and flowing lines",
-      "Water features and natural ventilation"
+      "Living walls and indoor plants",
+      "Natural stone and wood",
+      "Large windows",
+      "Organic shapes",
+      "Natural ventilation"
     ]
   },
   {
     id: 7,
     title: "Mid-Century Modern",
-    image: "/src/assets/ourr/1.jpg",
+    image: "/images/ourr/1.jpg", // Updated path
     tagline: "Retro Nostalgia meets Function",
-    philosophy: "Throwback to the design style of the mid-1900s—primarily the 1950s and 60s. It supports the idea that form follows function, featuring organic curves and geometric lines.",
+    philosophy: "Form follows function, featuring organic curves and geometric lines from the 50s and 60s.",
     elements: [
       "Furniture with tapered legs",
-      "Warm wood tones (Teak, Walnut)",
-      "Bold accent colors (Mustard, Olive, Orange)",
-      "Clean lines with organic curves",
-      "Statement lighting fixtures"
+      "Warm wood tones",
+      "Bold accent colors",
+      "Organic curves",
+      "Statement lighting"
     ]
-  },
-  // {
-  //   id: 8,
-  //   title: "Japandi",
-  //   image: "/src/assets/ourr/10.jpg", // Update with your actual image path
-  //   tagline: "East Meets West",
-  //   philosophy: "The perfect blend of Japanese artistic aesthetic and Scandinavian functionality. It focuses on the 'Wabi-sabi' principle of finding beauty in imperfection and the warmth of a cozy home.",
-  //   elements: [
-  //     "Low-profile furniture",
-  //     "Contrast of light woods and black metal",
-  //     "Handcrafted ceramics and decor",
-  //     "Uncluttered, intentional layouts",
-  //     "Soft, neutral color palettes with bamboo accents"
-  //   ]
-  // },
-  // {
-  //   id: 9,
-  //   title: "Art Deco Revival",
-  //   image: "/src/assets/ourr/12.jpg", // Update with your actual image path
-  //   tagline: "Glamour, Geometry & Opulence",
-  //   philosophy: "A modern take on the roaring 20s. This style is characterized by bold geometric patterns, rich colors, and lavish ornamentation, creating a space that feels like a high-end boutique hotel.",
-  //   elements: [
-  //     "Bold geometric shapes and patterns",
-  //     "High-shine finishes (Chrome, Glass, Lacquer)",
-  //     "Symmetry and repetitive motifs",
-  //     "Jewel-toned accents (Emerald, Sapphire, Gold)",
-  //     "Statement-making, tiered lighting"
-  //   ]
-  // }
+  }
 ];
 
 const StylePalette = () => {

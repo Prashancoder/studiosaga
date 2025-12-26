@@ -7,7 +7,7 @@ import hero3 from "@/assets/hero-3.jpg";
 
 // Mobile Images (Updated with your new paths)
 import mobileHero1 from "@/assets/mobile/55.jpg"; 
-import mobileHero2 from "@/assets/mobile/66.jpg"; 
+import mobileHero2 from "@/assets/mobile/66.jpg"; // reject 
 
 const slides = [
   {
