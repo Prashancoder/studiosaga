@@ -69,7 +69,7 @@ export default function Contact() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <p className="text-white/90 text-xs md:text-sm font-medium tracking-[0.3em] uppercase mb-4">
-              Studiasaga Interiors
+              StudiaSaga Interiors
             </p>
             <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white mb-6">
               Contact Us
@@ -121,7 +121,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold tracking-wider uppercase text-muted-foreground mb-1">Email Us</p>
-                    <p className="font-serif text-xl text-foreground">studiasaga94@gmail.com</p>
+                    <p className="font-serif text-xl text-foreground">StudiaSaga94@gmail.com</p>
                   </div>
                 </div>
 
@@ -208,7 +208,7 @@ export default function Contact() {
           allowFullScreen={true}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Studiasaga Studio Location"
+          title="StudiaSaga Studio Location"
         ></iframe>
       </section>
 

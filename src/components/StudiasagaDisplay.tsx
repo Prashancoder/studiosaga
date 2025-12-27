@@ -25,11 +25,11 @@ const customStyle: CustomStyle = {
   '--title-font-family': 'ui-serif, Georgia, Cambria, "Times New Roman", Times, serif'
 };
 
-// Renamed the component to StudiasagaDisplay for easier integration into other files
-const StudiasagaDisplay: FC = () => { 
+// Renamed the component to StudiaSagaDisplay for easier integration into other files
+const StudiaSagaDisplay: FC = () => { 
   // Array of social icons and placeholder links with explicit SocialIcon array type
   const socialIcons: SocialIcon[] = [
-    { Icon: Mail, name: 'Email', href: 'mailto:contact@studiasaga.com' },
+    { Icon: Mail, name: 'Email', href: 'mailto:contact@StudiaSaga.com' },
     { Icon: Linkedin, name: 'LinkedIn', href: '#' },
     { Icon: Instagram, name: 'Instagram', href: '#' },
     { Icon: Facebook, name: 'Facebook', href: '#' },
@@ -88,4 +88,4 @@ const StudiasagaDisplay: FC = () => {
   );
 };
 
-export default StudiasagaDisplay ; // Export the renamed component
+export default StudiaSagaDisplay ; // Export the renamed component

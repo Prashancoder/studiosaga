@@ -58,7 +58,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2 text-sm font-light text-muted-foreground">
                 <Mail className="w-4 h-4" />
-                <span>hello@studiasaga.com</span>
+                <span>hello@StudiaSaga.com</span>
               </li>
               <li className="flex items-start gap-2 text-sm font-light text-muted-foreground">
                 <MapPin className="w-4 h-4 mt-1" />
@@ -95,7 +95,7 @@ const Footer = () => {
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm font-light text-muted-foreground">
-              © {new Date().getFullYear()} StudiaSaga. All rights reserved.
+              © {new Date().getFullYear()} Anam Cara. All rights reserved.
             </p>
             <div className="flex gap-6">
               <a href="#" className="text-sm font-light text-muted-foreground hover:text-foreground transition-colors">

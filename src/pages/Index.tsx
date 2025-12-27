@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import HeroCarousel from "@/components/HeroCarousel";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import StudiasagaDisplay from "@/components/StudiasagaDisplay";
+import StudiaSagaDisplay from "@/components/StudiaSagaDisplay";
 import ClientSection from "@/components/clients";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import ChalkTVSection from '@/components/ChalkTVSection'; 
@@ -78,7 +78,7 @@ const Index = () => {
         <ChalkTVSection />
       </main>
 
-      <StudiasagaDisplay />
+      <StudiaSagaDisplay />
       <Footer />
     </div>
   );
