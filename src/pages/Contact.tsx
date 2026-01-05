@@ -69,10 +69,10 @@ export default function Contact() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <p className="text-white/90 text-xs md:text-sm font-medium tracking-[0.3em] uppercase mb-4">
-              StudiaSaga Interiors
+              Anam Cara Interiors
             </p>
             <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-white mb-6">
-              Contact Us
+              Let's Begin Your Interior Journey
             </h1>
             <div className="w-24 h-[1px] bg-white/60 mx-auto"></div>
           </motion.div>
@@ -96,12 +96,12 @@ export default function Contact() {
               </span>
 
               <h2 className="font-serif text-4xl md:text-5xl text-foreground leading-tight mb-8">
-                Let’s Craft Your <br />
-                <span className="italic text-muted-foreground">Dream Space</span>
+                Planning Your <br />
+                <span className="italic text-muted-foreground">Home Interiors?</span>
               </h2>
 
               <p className="text-muted-foreground text-lg leading-relaxed font-light mb-12">
-                Whether you are looking to renovate your home or design a new office, our team is ready to bring your vision to life with elegance.
+                If you're looking for a calm, well-planned, and stress-free approach to interiors, Anam Cara Interiors offers turnkey solutions designed around affordable luxury and real living. Book a consultation and experience interiors done with clarity.
               </p>
 
               <div className="space-y-8">
@@ -111,7 +111,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold tracking-wider uppercase text-muted-foreground mb-1">Call Us</p>
-                    <p className="font-serif text-xl text-foreground">+91 9667733382</p>
+                    <p className="font-serif text-xl text-foreground">+91 XXXXXXXX</p>
                   </div>
                 </div>
 
@@ -121,7 +121,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="text-xs font-semibold tracking-wider uppercase text-muted-foreground mb-1">Email Us</p>
-                    <p className="font-serif text-xl text-foreground">StudiaSaga94@gmail.com</p>
+                    <p className="font-serif text-xl text-foreground">info@anamcarainteriors.com</p>
                   </div>
                 </div>
 
@@ -208,7 +208,7 @@ export default function Contact() {
           allowFullScreen={true}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="StudiaSaga Studio Location"
+          title="Anam Cara Interiors Studio Location"
         ></iframe>
       </section>
 

@@ -28,7 +28,7 @@ const Index = () => {
 
           <div className="container mx-auto max-w-4xl text-center">
             <h2 className="mb-8 leading-relaxed">    
-              {/* StudiaSaga - Curvy Signature Style */}
+              {/* Anam Cara Interiors - Curvy Signature Style */}
               <span 
                 className="text-2xl md:text-4xl text-foreground mr-3" 
                 style={{ 
@@ -38,38 +38,48 @@ const Index = () => {
                   transform: 'rotate(-2px)' 
                 }}
               >
-                StudiaSaga
+                Anam Cara Interiors
               </span>
               
               <span className="text-base md:text-lg font-light tracking-wide text-muted-foreground">
-                is an Interior Design Firm that Believes in
+                Affordable Luxury Interior Design & Turnkey Solutions
                 <br />
-                Thoughtfully Designing Impactful Spaces.
+                Thoughtfully Designed Interiors. Seamlessly Executed Homes.
               </span>
             </h2>
             
             <div className="space-y-6 text-muted-foreground font-light leading-relaxed">
               <p>
-                We are dedicated to crafting bespoke solutions that harmonize functionality with aesthetic appeal. With a keen eye for detail, our interior design studio creates unique and memorable spaces for residential and commercial projects, across India.
+                At Anam Cara Interiors, we design homes that feel calm, functional, and timeless. From concept to completion, we deliver end-to-end interior solutions with clarity, care, and cost transparency.
               </p>
               
               <p>
-                StudiaSaga is an interior design firm that believes in thoughtfully designing impactful spaces.
+                We specialize in affordable luxury interiors—where refined aesthetics meet intelligent planning and disciplined execution.
               </p>
               
               <p>
-                Our team of experts ensure a seamless experience for our clients through our process-driven design approach, elevating spaces.
+                Our team combines research-driven design, smart space planning, and disciplined execution to create interiors that are elegant, practical, and budget-conscious.
               </p>
             </div>
 
-            <Button
-              variant="outline"
-              onClick={() => navigate("/our-saga")}
-              className="mt-12 border-foreground text-foreground hover:bg-foreground hover:text-background font-light tracking-wide group"
-            >
-              Know More
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+              <Button
+                variant="outline"
+                onClick={() => navigate("/Contact")}
+                className="border-foreground text-foreground hover:bg-foreground hover:text-background font-light tracking-wide group"
+              >
+                Book a Free Design Consultation
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button
+                variant="outline"
+                onClick={() => navigate("/our-saga")}
+                className="border-foreground text-foreground hover:bg-foreground hover:text-background font-light tracking-wide group"
+              >
+                View Our Work
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
           </div>
         </section>
 

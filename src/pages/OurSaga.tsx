@@ -164,7 +164,7 @@ const OurSaga = () => {
     // UPDATE: Sizes reduced to (3xl, 5xl, 6xl) for a cleaner, smaller look
     className="text-white text-3xl md:text-5xl lg:text-6xl mb-6 font-extralight tracking-[0.2em] uppercase"
   >
-    Our Saga
+    Our Anam Cara 
   </motion.h1>
   
   <motion.p 
@@ -173,7 +173,7 @@ const OurSaga = () => {
     transition={{ duration: 0.8, delay: 0.2 }}
     className="text-white/90 text-xs md:text-base font-light tracking-[0.3em] uppercase"
   >
-    Smart Interiors, Smart Prices
+    Designing Homes That Feel Calm, Functional & Timeless
   </motion.p>
 </div>
       </div>
@@ -184,16 +184,19 @@ const OurSaga = () => {
           <div className="container mx-auto px-6 max-w-6xl">
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <div className="space-y-6">
-                <span className="text-primary text-xs font-bold tracking-[0.2em] uppercase">Who We Are</span>
+                <span className="text-primary text-xs font-bold tracking-[0.2em] uppercase">About Us</span>
                 <h2 className="font-serif text-3xl md:text-4xl text-foreground leading-tight">
-                  Inspired by Artistry, <br /> Driven by <span className="italic text-muted-foreground">Budget</span>
+                  Designing Homes with Soul, <br /> <span className="italic text-muted-foreground">Structure & Simplicity</span>
                 </h2>
                 <div className="space-y-4 text-muted-foreground text-lg font-light leading-relaxed">
                   <p>
-                    Anam Cara was founded with a singular passion: to transform ordinary spaces into personalized sanctuaries that don't require overspending. We saw too many people compromise on their dream interiors due to budget constraints, and we knew there had to be a better way.
+                    Anam Cara Interiors is a residential interior design and turnkey execution studio dedicated to creating affordable luxury homes with soul, simplicity, and structure.
                   </p>
                   <p>
-                    We believe that great design should be accessible to everyone. By blending creativity, functionality, and affordability, we prove that exceptional interiors are within reach for all budgets.
+                    We believe great design is not about excess—it's about intent. Every space we create balances aesthetics, functionality, and long-term usability. Our work reflects thoughtful planning, calm neutral aesthetics, quality craftsmanship, honest pricing, and respect for timelines.
+                  </p>
+                  <p>
+                    We design spaces that age gracefully and feel good every day. Homes should support life, not overwhelm it.
                   </p>
                 </div>
               </div>
@@ -276,7 +279,7 @@ const OurSaga = () => {
                   </div>
 
                   <p className="text-white/90 font-light leading-relaxed translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    To craft interiors that authentically reflect your lifestyle, inspire daily comfort, and maximize the value of every dollar invested.
+                    To create calm, functional, and timeless homes that support real living. We design interiors that balance aesthetics, functionality, and long-term usability—making luxury accessible without dilution.
                   </p>
                 </div>
               </div>
@@ -305,7 +308,7 @@ const OurSaga = () => {
                   </div>
 
                   <p className="text-white/95 font-light leading-relaxed translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    To be the trusted partner for budget-conscious design, proving that financial constraints can inspire rather than limit creative excellence.
+                    To be the trusted partner for affordable luxury interiors, proving that thoughtful design and disciplined execution create homes that feel premium without overspending.
                   </p>
                 </div>
               </div>
@@ -334,7 +337,7 @@ const OurSaga = () => {
                   </div>
 
                   <p className="text-white/90 font-light leading-relaxed translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    Transparency, collaboration, and integrity guide every project. We build lasting relationships through honest communication.
+                    Function before decoration. Timeless over trendy. Calm color palettes. Durable materials. Homes designed for real life. These values guide every project and ensure spaces that age gracefully.
                   </p>
                 </div>
               </div>

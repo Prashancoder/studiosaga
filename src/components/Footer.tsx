@@ -15,7 +15,7 @@ const Footer = () => {
               <Link to="/">
                 <img 
                   src={logo} 
-                  alt="StudiaSaga Logo" 
+                  alt="Anam Cara Interiors Logo" 
                   className="h-34 w-auto object-contain"                />
               </Link>
             </div>
@@ -54,11 +54,11 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm font-light text-muted-foreground">
                 <Phone className="w-4 h-4" />
-                <span>+91 95991 97669</span>
+                <span>+91 XXXXXXXX</span>
               </li>
               <li className="flex items-center gap-2 text-sm font-light text-muted-foreground">
                 <Mail className="w-4 h-4" />
-                <span>hello@StudiaSaga.com</span>
+                <span>info@anamcarainteriors.com</span>
               </li>
               <li className="flex items-start gap-2 text-sm font-light text-muted-foreground">
                 <MapPin className="w-4 h-4 mt-1" />

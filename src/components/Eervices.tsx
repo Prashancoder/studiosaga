@@ -16,53 +16,53 @@ import serviceBathroom from "@/assets/service-bathroom.jpg";
 
 const services = [
   {
-    title: "Modular Kitchen",
-    description: "Smart, stylish kitchens designed for modern living",
+    title: "Residential Interior Design",
+    description: "Personalized interiors for apartments, builder floors, and villas designed around your lifestyle",
     image: serviceKitchen,
   },
   {
-    title: "Modular Wardrobe",
-    description: "Custom storage solutions that maximize space elegantly",
+    title: "Turnkey Interior Solutions",
+    description: "End-to-end execution from design to final handover—one team, one contract, zero stress",
     image: serviceWardrobe,
   },
   {
-    title: "Living Room Interiors",
-    description: "Creating inviting spaces for family and gatherings",
+    title: "Modular Kitchens & Wardrobes",
+    description: "Precision-built modular systems balancing storage, style, and durability",
     image: serviceLiving,
   },
   {
-    title: "Wall TV Units",
-    description: "Elegant entertainment centers with modern aesthetics",
+    title: "Custom Furniture & Finishes",
+    description: "Tailor-made furniture, paneling, lighting, and detail elements for unique spaces",
     image: serviceTvUnit,
   },
   {
-    title: "False Ceiling & Lighting",
-    description: "Designer ceilings with ambient lighting solutions",
+    title: "3D Design & Visualization",
+    description: "Experience your home through detailed 3D visuals before execution begins",
     image: serviceCeiling,
   },
   {
-    title: "Kids Room Interiors",
-    description: "Playful yet elegant spaces for your little ones",
+    title: "Living Room Interiors",
+    description: "Creating inviting spaces for family and gatherings that reflect your personal style",
     image: serviceKidsRoom,
   },
   {
-    title: "Bathroom Vanity",
-    description: "Luxurious vanity units with premium finishes",
+    title: "Bedroom Interiors",
+    description: "Calm, functional bedrooms designed for rest and daily comfort",
     image: serviceBathroom,
   },
   {
-    title: "Full Home Renovation",
-    description: "Complete transformation of your living space",
+    title: "Complete Home Renovation",
+    description: "Full transformation handling everything from civil work to final styling",
     image: serviceRenovation,
   },
   {
     title: "Office Interior Design",
-    description: "Professional workspaces that inspire productivity",
+    description: "Professional workspaces that inspire productivity while maintaining style",
     image: serviceOffice,
   },
   {
-    title: "Furniture & Custom Units",
-    description: "Bespoke furniture crafted to your specifications",
+    title: "Bathroom & Utility Design",
+    description: "Practical layouts with adequate storage, durable materials, and good lighting",
     image: serviceFurniture,
   },
 ];
@@ -123,14 +123,14 @@ export function Services() {
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <p className="text-[#E6C288] text-sm font-medium tracking-[0.2em] uppercase mb-4">
-            Our Services
+            Our Core Services
           </p>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-tight mb-6">
-            Crafting Beautiful
-            <span className="text-[#E6C288]"> Living Experiences</span>
+            Complete Interior Solutions
+            <span className="text-[#E6C288]"> for Modern Homes</span>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            From modular kitchens to complete home renovations, we offer comprehensive interior design solutions tailored to your unique lifestyle.
+            From residential interior design to turnkey execution, modular kitchens to custom furniture—we offer comprehensive solutions designed around your lifestyle, habits, and daily routines.
           </p>
         </motion.div>
 

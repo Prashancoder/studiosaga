@@ -34,39 +34,35 @@ export function About() {
           >
             {/* Eyebrow Text */}
             <p className={`text-xs font-bold tracking-[0.2em] uppercase mb-4 ${goldColor}`}>
-              About Saga Studia Interiors
+              About Anam Cara Interiors
             </p>
 
             {/* Main Heading */}
             <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-medium text-stone-900 leading-[1.1] mb-8">
-              Smart Budget, <br />
-              <span className={goldColor}>Premium Feel</span>
+              Designing Homes with Soul, <br />
+              <span className={goldColor}>Structure & Simplicity</span>
             </h2>
 
             {/* Quote Box */}
             <div className="relative pl-6 py-4 pr-6 mb-8 bg-[#f5f0e6] rounded-r-lg border-l-4 border-[#a38656]">
               <p className="text-lg md:text-xl text-stone-700 italic font-serif leading-relaxed">
-                "We don’t just design rooms—we design reliable, practical living
-                experiences for those who value quality and trust."
+                "We believe great design is not about excess—it's about intent. Every space we create balances aesthetics, functionality, and long-term usability."
               </p>
             </div>
 
             {/* Description Paragraph */}
             <p className="text-stone-600 leading-relaxed mb-8 text-base md:text-lg font-light">
-              At Saga Studia Interiors, every design is crafted for those who
-              seek premium comfort without stretching their budget. We create
-              homes that look luxurious, feel thoughtfully designed, and deliver
-              high value—so you enjoy smart style without unnecessary
-              extravagance.
+              Anam Cara Interiors is a residential interior design and turnkey execution studio dedicated to creating affordable luxury homes with soul, simplicity, and structure. We design interiors that are functional first, calm in aesthetic, honest in materials, and disciplined in execution.
             </p>
 
             {/* Feature List */}
             <div className="space-y-4 mb-10">
               {[
-                "Non-Civil, Hassle-Free Execution (No dust, no delays)",
-                "Transparent Pricing, Zero Hidden Costs",
-                "Quality Materials designed for everyday family life",
-                "Timely Delivery so you can start living sooner",
+                "Affordable luxury design approach",
+                "Complete turnkey interior execution",
+                "Modular + customized furniture",
+                "Fixed timelines & transparent pricing",
+                "Dedicated project coordination",
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <CheckCircle2 className={`w-5 h-5 ${goldColor} mt-1 flex-shrink-0`} />
@@ -106,10 +102,10 @@ export function About() {
               {/* Floating White Card at Bottom */}
               <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-md p-6 rounded-2xl shadow-lg">
                 <h3 className={`font-serif text-xl md:text-2xl mb-2 ${goldColor}`}>
-                  Live Life with Standard
+                  Affordable Luxury
                 </h3>
                 <p className="text-sm text-stone-500 font-light">
-                  Interiors tailored to your lifestyle, crafted for comfort.
+                  Thoughtfully designed interiors for real living.
                 </p>
               </div>
             </div>

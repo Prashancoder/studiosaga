@@ -29,7 +29,7 @@ const customStyle: CustomStyle = {
 const StudiaSagaDisplay: FC = () => { 
   // Array of social icons and placeholder links with explicit SocialIcon array type
   const socialIcons: SocialIcon[] = [
-    { Icon: Mail, name: 'Email', href: 'mailto:contact@StudiaSaga.com' },
+    { Icon: Mail, name: 'Email', href: 'mailto:info@anamcarainteriors.com' },
     { Icon: Linkedin, name: 'LinkedIn', href: '#' },
     { Icon: Instagram, name: 'Instagram', href: '#' },
     { Icon: Facebook, name: 'Facebook', href: '#' },
